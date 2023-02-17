@@ -1,0 +1,23 @@
+\documentclass{article}
+\usepackage{xfrac,bigints}
+\begin{document}
+1st Integral
+$\int_{0}^{\infty}\left( \frac{x}{sin h(x)}\right)^{2}dx=$
+$4\int_{0}^{\infty}\left( \frac{x^{2}}{(e^{x}-e^{-x})^{2}} \right)$
+$=4\int_{0}^{\infty}\left( \frac{x^{2}e^{-2x}}{(1-e^{-2x})^{2}} \right)dx$\\\\
+$=4\int_{0}^{\infty}\sum_{n=1}^{\infty }x^{2}ne^{-2nx}dx=4\sum_{n=1}^{\infty }n\int_{0}^{\infty}x^2e^{-2nx}dx\\\\
+=4\sum_{n=1}^{\infty }n\int_{0}^{\infty}x^2e^{-2nx}dx=4\sum_{n=1}^{\infty }n\int_{0}^{\infty}(\frac{x}{2n})^2e^{-x}\frac{dx}{2n}\\\\
+=\frac{1}{2}\sum_{n=1}^{\infty }\frac{1}{n^2}\int_{0}^{\infty}x^2e^{-x}dx=\sum_{n=1}^{\infty}n^{-2}
+=\zeta(2)=\frac{\pi^2}{6}$\\\\
+
+2nd Integral
+$\int_{0}^{\infty}\left( \frac{x}{sin h(x)}\right)^{2}dx=$
+$4\int_{0}^{\infty}\left( \frac{x^{2}}{(e^{x}-e^{-x})^{2}} \right)$
+$=4\int_{0}^{\infty}\left( \frac{x^{2}e^{-2x}}{(1-e^{-2x})^{2}} \right)dx$\\\\
+$=4\int_{0}^{\infty}\sum_{n=1}^{\infty }x^{2}ne^{-2nx}dx\\\\
+=4\sum_{n=1}^{\infty }n\int_{0}^{\infty}x^2e^{-2nx}dx$\\\\
+$=4\sum_{n=1}^{\infty }n\int_{0}^{\infty}x^2e^{-2nx}dx\\\\$
+$=4\sum_{n=1}^{\infty }n\int_{0}^{\infty}(\frac{x}{2n})^2e^{-x}\frac{dx}{2n}$\\\\$ =\frac{1}{2}\sum_{n=1}^{\infty }\frac{1}{n^2}\int_{0}^{\infty}x^2e^{-x}dx=\sum_{n=1}^{\infty}n^{-2}$\\\\
+$=\zeta(2)=\frac{\pi^2}{6}$\\\\
+  
+\end{document}
