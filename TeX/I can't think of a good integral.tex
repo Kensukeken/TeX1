@@ -1,53 +1,26 @@
-% Numbers
-\def\an{65}
-\def\l{.5}
-\def\h{1.5}
-\def\r{2}
-\def\n{6} 
-% number of lines
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\title{Solution}
+\begin{document}
+$\int_{-2}^{2}\left( x^{3}cos\frac{x}{2}+\frac{1}{2} \right)\sqrt{4-x^{2}}dx$\\\\\
+First, let's make the substitution $x = 2\sin{\theta}$\\\ 
+so $dx =2\cos{\theta}d\theta$ and $\sqrt{4-x^2} = 2\cos{\theta}$.\\\\\
+Now, we have:\\\\
+$\Longrightarrow$ 
+$\int_{-2}^{2}\left( x^{3}cos\frac{x}{2}+\frac{1}{2} \right)\sqrt{4-x^{2}}dx$  \\\\\ 
+$= \int_{-\frac{\pi}{2}}^{\frac{\pi}{2}}\left( (2\sin{\theta})^{3}\cos\frac{2\sin{\theta}}{2}+\frac{1}{2} \right)(2\cos{\theta})d\theta$ \\\\\ 
+$=\int_{-\frac{\pi}{2}}^{\frac{\pi}{2}}\left( 8\sin^{3}{\theta}\cos{\theta}\cos\frac{2\sin{\theta}}{2}+\cos{\theta} \right)d\theta$\\\\\ 
+$=\int_{-\frac{\pi}{2}}^{\frac{\pi}{2}}\left( 8\sin^{3}{\theta}\cos{\theta}\cos\sin{\theta}+\cos{\theta} \right)d\theta$\\\\
+Now, we can use integration by parts:\\
+Let $u = \sin{\theta}$
+$dv = 8\sin^{2}{\theta}\cos{\theta}\cos\sin{\theta} + \cos{\theta}d\theta$\\\\\ 
+then $du = \cos{\theta}d\theta$\\\\\ 
+$v = -\frac{8}{2}\sin^{3}{\theta}\sin\sin{\theta} - \sin{\theta}$\\\\\ 
+So, we have:
+$\int_{-\frac{\pi}{2}}^{\frac{\pi}{2}}\left( 8\sin^{3}{\theta}\cos{\theta}\cos\sin{\theta}+\cos{\theta} \right)d\theta = [-\frac{8}{2}\sin^{3}{\theta}\sin\sin{\theta} - \sin{\theta}]_{-\frac{\pi}{2}}^{\frac{\pi}{2}}$
+$=\frac{8}{2}(0-0) - (-1-1) = 0$\\\
+So the definite integral is 0.\\\\
 
-% Colors
-\definecolor{electricyellow}{rgb}{1.0, 1.0, 0.0}
-\def\bg{red}
-\def\strokecolor{black}
-\def\fillcolor{white}
-
-%Shapes
-\def\filllamp#1#2{
-    \filldraw[color=#2,fill=#2,rounded corners=10pt] (#1,-\r)--(#1,0)arc(-\an:180+\an :\r*1.2)--+(0,-\r)--cycle;
-}
-\def\strokelamp#1#2{
-    \draw[line width=#2,color=\fillcolor,rounded corners=10pt] (#1,-\r)--(#1,0)arc(-\an:180+\an :\r*1.2)--+(0,-\r)--cycle;
-}
-\begin{tikzpicture}
-
-    % background
-    \fill[red] (7,9)  rectangle  (-7,-5) ;
-
-    % draw the lamp
-    \fill[\fillcolor,rounded corners=10pt] (-\r*.4,-\r+.1) -- (0,-\r*1.2) --  (\r*.4,-\r+.1) -- cycle;
-    \filllamp{1}{\strokecolor}
-    \filllamp{1.4}{electricyellow}
-    \strokelamp{1}{1mm}
-    \filldraw[line width=1mm,color=\fillcolor,fill=\strokecolor]  (-1,-2) --(-1,-.3) -- (1,-.3)  [rounded corners=10pt]-- (1,-2)-- cycle;
-
-    % lines clipped by a rectangle
-    \begin{scope}
-        \clip  (-1,-2) --(-1,-.3) -- (1,-.3)  [rounded corners=10pt]-- (1,-2)-- cycle;
-        \foreach \i in {0,...,\n}{
-            \draw [line width=1mm ,color=\fillcolor , rounded corners=5pt] 
-(1,{-.3- 2*\i/(\n+2)}) -- (-1, {-.3 -2*(\i+1)/(\n+2)});
-        }
-    \end{scope}
-
-    \draw [dash pattern=on 20pt off 10pt ,line width= 1.2mm,cap=round,color=\fillcolor] (1.7,3) arc (30:60:\r*1.2);
-    \draw [cap=round,line width=1mm,color=\fillcolor,rounded corners=8.5pt]
-    (\l,-.3) -- (\l,\h) -- (\l+0.5,\h) -- (\l+0.5,\h-0.7) --(-\l-0.5,\h-0.7) -- (-\l-0.5,\h) -- (-\l,\h) -- (-\l,-0.3);
-
-    \foreach \i/\x in {0/1,1/2,2/3,3/.5,4/1,5/3,6/2,7/0.5,8/1.5}{
-        \draw[rotate around={-30+240*\i/8:(0.014,2.175)},cap=round,line width=2mm,color=electricyellow] (3.5,2.175) -- +(\x,0);
-    }
-\fill [color=\strokecolor,fill opacity=0.5] (0,-3) ellipse (1 and .25);
-\end{tikzpicture}
-
-2e^{\sqrt{3}}.(\sqrt{x}-1)+C
+$\frac{\int_{}^{} \left(\sqrt{[5-\sqrt[3]{3}]^{2}_{-2}}\times  \Pi \right)dx}
+{\left( \lim_{x \to \infty}\frac{\pi(3) \space \times\space 4}{\frac{\pi}{3}} \right)(4\sqrt{-1})^{5}}\space{\times }\sum_{k=1}^{n=k^{2}} (5)^{4n}\times (n-1)=?$
+\end{document}
