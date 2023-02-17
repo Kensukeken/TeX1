@@ -1,0 +1,36 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+\begin{document}
+
+\title{An Introduction to Galois Theory}
+\date{\today}
+
+\maketitle
+
+\section{Background}
+
+Galois theory is a branch of algebraic mathematics that studies the symmetries of algebraic equations. The theory is named after the French mathematician Evariste Galois (1811-1832), who made significant contributions to the subject before his untimely death at the age of 20.
+
+\section{Fundamental Theorem of Galois Theory}
+
+The fundamental theorem of Galois theory relates the algebraic structure of a field extension to the geometric structure of its corresponding Galois group.
+
+Let $K$ be a field and $L$ be a finite extension of $K$. The Galois group of $L$ over $K$, denoted by $\text{Gal}(L/K)$, is the group of all field automorphisms of $L$ that fix $K$ pointwise. The group $\text{Gal}(L/K)$ is a subgroup of the symmetric group of permutations of the roots of the minimal polynomial of any element of $L$ over $K$.
+
+The fundamental theorem of Galois theory states that there is a bijection between the intermediate fields of $L/K$ and the subgroups of $\text{Gal}(L/K)$. In particular, there is a one-to-one correspondence between the fields $K \subseteq F \subseteq L$ and the subgroups $H \subseteq \text{Gal}(L/K)$. This correspondence is given by the fixed field and Galois correspondence theorems.
+
+\section{Example}
+
+As an example, let $K = \mathbb{Q}$ and $L = \mathbb{Q}(\sqrt{2},\sqrt{3})$. The Galois group of $L/\mathbb{Q}$ is isomorphic to the Klein four-group, $V_4$. The subgroups of $V_4$ correspond to the intermediate fields of $L/\mathbb{Q}$:
+
+\begin{align*}
+\{1\} &\longleftrightarrow \mathbb{Q} \\
+\langle (12)(34) \rangle &\longleftrightarrow \mathbb{Q}(\sqrt{2}) \\
+\langle (13)(24) \rangle &\longleftrightarrow \mathbb{Q}(\sqrt{3}) \\
+\langle (14)(23) \rangle &\longleftrightarrow \mathbb{Q}(\sqrt{6}) \\
+V_4 &\longleftrightarrow L
+\end{align*}
+
+\end{document}
