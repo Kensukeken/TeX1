@@ -1,0 +1,22 @@
+\documentclass{article}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{bigints}
+\begin{document}
+$
+I = \int_{0}^{\frac{\pi}{2}}ln(cos(x))dx=\\\\
+\\
+I = \int_{0}^{\frac{\pi}{2}}ln(cos(x))dx=
+           \int_{0}^{\frac{\pi}{2}}ln(cos(\frac{\pi}{2}-2))dx
+           =\int_{0}^{\frac{\pi}{2}}ln(sin(x))dx\\\\
+2 I = \int_{0}^{\frac{\pi}{2}}ln(cos(x))dx+ln(sin(x))dx\\\\
+= \int_{0}^{\frac{\pi}{2}}ln(sin(x)cos(x))dx= \int_{0}^{\frac{\pi}{2}}ln(\frac{1}{2}sin(2x))dx\\\\
+= \int_{0}^{\frac{\pi}{2}} ln\left( \frac{1}{2} \right)dx + \int_{0}^{\frac{\pi}{2}}(sin(2x))dx\\\\
+= \frac{\pi}{2}ln\left( \frac{1}{2} \right)+\frac{1}{2}\int_{0}^{\frac{\pi}{2}} sin(x)dx\\\\
+= \frac{\pi}{2}ln\left( \frac{1}{2} \right)+\frac{1}{2}\int_{0}^{\frac{\pi}{2}} sin(x)dx+\frac{1}{2}\int_{\frac{\pi}{2}}^{n}sin(x)dx\\\\
+=\frac{\pi}{2}ln\left(\frac{1}{2}\right)+\frac{1}{2}I+\frac{1}{2}\int_{0}^{\frac{\pi}{2}}cos(x)dx\\\\
+2I=\frac{\pi}{2}ln\left( \frac{1}{2}\right)+I\\\\
+I=\frac{\pi}{2}ln\left( \frac{1}{2}\right)= \int_{0}^{\frac{\pi}{2}}ln(cos(x))dx
+$\\\\
+
+\end{document}
