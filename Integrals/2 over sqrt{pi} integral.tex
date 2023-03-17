@@ -1,0 +1,23 @@
+\documentclass{article}
+\usepackage{musixtex}
+
+\begin{document}
+$$\int \frac{2e^{-t^2}}{\sqrt{\pi}} dt = -\frac{2}{\sqrt{\pi}}\int e^{-t^2}d(-t^2)$$
+
+Let $u = -t^2$, then $du = -2t, dt$ and we have:
+
+$$-\frac{2}{\sqrt{\pi}}\int e^{-t^2}d(-t^2) = -\frac{2}{\sqrt{\pi}}\int e^u du = -\frac{2}{\sqrt{\pi}} e^u + C = -\frac{2}{\sqrt{\pi}} e^{-t^2} + C$$
+
+where $C$ is an arbitrary constant of integration.
+
+Now we can evaluate the original limit:
+
+$$\lim_{x\to\infty} \int_{0}^{x} \frac{2e^{-t^2}}{\sqrt{\pi}} dt = \lim_{x\to\infty} \left[-\frac{2}{\sqrt{\pi}} e^{-t^2} \right]{0}^{x} = \lim{x\to\infty} \left[-\frac{2}{\sqrt{\pi}} e^{-x^2} + \frac{2}{\sqrt{\pi}} \right]$$
+
+Since $e^{-x^2}$ approaches zero faster than $x$ approaches infinity, we have:
+
+$$\lim_{x\to\infty} \left[-\frac{2}{\sqrt{\pi}} e^{-x^2} + \frac{2}{\sqrt{\pi}} \right] = \frac{2}{\sqrt{\pi}}$$
+
+Therefore, the limit of the given integral as $x$ approaches infinity is $\frac{2}{\sqrt{\pi}}$.
+
+\end{document}
