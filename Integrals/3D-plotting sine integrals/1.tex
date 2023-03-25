@@ -1,0 +1,20 @@
+\listfiles
+\documentclass{article}
+\usepackage{pst-solides3d,pst-func}
+
+\begin{document}
+\psset{Decran=50,viewpoint=10 20 40 rtp2xyz,lightsrc=viewpoint}
+\begin{pspicture}(-6,-4)(6,4)
+\defFunction{func}(u,v)
+  {u}
+  {v}
+  {u tx@FuncDict begin Si end u 3 div sub u v Div RadtoDeg sin Pi dup mul div add }  
+\psSolid[object=surfaceparametree,base=-1 1 -1 1,function=func,
+         ngrid=40 40,hue=0 1]
+\end{pspicture}
+
+
+$x=u$, $y=v$ and 
+$z=\int_0^x \frac{\sin\left(\pi t \right)}{\pi t} - 
+\frac{1}{3} \mathrm{d}t+\frac{1}{\pi^2}\sin\left(\pi \frac{x}{y}\right)$
+\end{document}
