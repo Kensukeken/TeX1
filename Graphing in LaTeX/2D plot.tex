@@ -1,0 +1,12 @@
+\hspace{1cm}
+\begin{tikzpicture}
+\draw[->] (-2,0) -- (2,0) node[right] {$x$};
+\draw[->] (0,-2) -- (0,2) node[above] {$y$};
+\draw[domain=-2:2,samples=100,red] plot (\x, {(\x)^3 - 2*(\x)});
+\end{tikzpicture}
+\hspace{1cm}
+\begin{tikzpicture}
+\draw[->] (-2,0) -- (2,0) node[right] {$x$};
+\draw[->] (0,-2) -- (0,2) node[above] {$y$};
+\draw[domain=-2:2,samples=100,green!60!black] plot (\x, {sin(\x r)});
+\end{tikzpicture}
