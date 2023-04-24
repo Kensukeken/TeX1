@@ -1,0 +1,15 @@
+\documentclass{article}
+\usepackage{tikz}
+\usepackage{pgfplots}
+
+\begin{tikzpicture}
+\begin{axis}[
+    xlabel=$x$,
+    ylabel=$y$,
+    domain=-2:2,
+    y domain=-2:2,
+    view={60}{30}
+]
+\addplot3[surf, colormap/hot, samples=50] {sin(deg(x^2+y^2))};
+\end{axis}
+\end{tikzpicture}
