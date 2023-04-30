@@ -39,4 +39,4 @@ Here are some useful resources for learning and using LaTeX & TeX.
 - [TeX in a nutshell](http://petr.olsak.net/ftp/olsak/optex/tex-nutshell.pdf): A concise reference guide to TeX.
 - [source2e](https://ctan.org/pkg/source2e): The source code of LaTeX2e's document class and packages.
 
-Feel free to check out my stuff on GitHub: https://github.com/Kensukeken/TeX
+Feel free to check out my stuff on GitHub: https://github.com/Kensukeken/TeX.
