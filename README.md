@@ -1,27 +1,33 @@
-# TeXWorks
+# LaTeX and TeX Resources
 
-Welcome to the TeXWorks repository! This repository contains a collection of TeX files and templates that can be used for typesetting documents, presentations, and reports. It includes examples of TeX code and tools for customizing the look and feel of documents.
+This is a collection of useful resources for learning and using LaTeX and TeX. 
 
-## Getting Started
+## LaTeX
 
-To get started with TeXWorks, simply clone this repository to your local machine and start exploring the different TeX files and templates. Each file has its own set of instructions and usage guidelines in its respective README file.
+### Tutorials
+- Overleaf's tutorials: [Learn LaTeX in 30 minutes](https://www.overleaf.com/learn/latex/Learn_LaTeX_in_30_minutes)
+- General LaTeX: [Learn LaTeX](https://www.learnlatex.org/)
 
-## Examples
+### Common Packages
+- amsmath & mathtools: [amsmath](https://ctan.org/pkg/amsmath) & [mathtools](https://ctan.org/pkg/mathtools)
+- amsthm & amssymb: [amsthm](https://ctan.org/pkg/amsthm) & [amssymb](https://ctan.org/pkg/amssymb)
+- PGF/TikZ: [PGF/TikZ](https://ctan.org/pkg/pgf)
 
-- [Article template](./templates/article_template.tex)
-- [Beamer presentation template](./templates/beamer_template.tex)
-- [Resume template](./templates/resume_template.tex)
+### Symbols
+- Interactive search by drawing: [Detexify](http://detexify.kirelabs.org/classify.html)
+- TeXit's cheatsheet: [TeXit Cheatsheet](https://cdn.discordapp.com/attachments/554128715790155796/555351313836277781/texit_cheatsheet_1.pdf)
+- Math symbols: [Math Symbols](https://www.caam.rice.edu/~heinken/latex/symbols.pdf)
+- Comprehensive list: [Comprehensive List](http://tug.ctan.org/info/symbols/comprehensive/symbols-a4.pdf)
 
-## Contributions
+### Additional Resources
+- Stack Exchange: [TeX - LaTeX Stack Exchange](https://tex.stackexchange.com/)
 
-Contributions to this repository are welcome. If you have a new TeX file or template that you would like to add, please submit a pull request with your changes. All contributions are subject to review and approval before being merged into the repository.
+## TeX
 
-## Resources
-
-- [LaTeX Wikibook](https://en.wikibooks.org/wiki/LaTeX)
-- [Overleaf](https://www.overleaf.com/learn)
-- [ShareLaTeX](https://www.sharelatex.com/learn)
-
-## License
-
-The code in this repository is licensed under the MIT License. Please see the LICENSE file for more information.
+### Guides
+- Notes On Programming in TeX: [Programming in TeX](http://pgfplots.sourceforge.net/TeX-programming-notes.pdf)
+- The TeXbook: [The TeXbook](https://cdn.discordapp.com/attachments/852438126651506728/1068824115059892304/texbook.pdf)
+- TeX by Topic: [TeX by Topic](https://ctan.org/pkg/texbytopic)
+- A Gentle Introduction to TeX: [Introduction to TeX](https://ctan.org/pkg/gentle)
+- TeX in a nutshell: [TeX in a Nutshell](http://petr.olsak.net/ftp/olsak/optex/tex-nutshell.pdf)
+- source2e: [source2e](https://ctan.org/pkg/source2e)
