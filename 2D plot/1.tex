@@ -1,0 +1,22 @@
+\documentclass{article}
+\usepackage{tikz}
+\usepackage{pgfplots}
+
+\begin{document}
+
+\begin{tikzpicture}
+\begin{axis}[
+    xlabel=$x$,
+    ylabel=$y$,
+    domain=-5:5,
+    samples=200,
+    axis lines=middle,
+    enlargelimits=true,
+    clip=false,
+    axis equal image=true,
+]
+\addplot [red,thick] {tan(cos(tan(sin(x))))};
+\end{axis}
+\end{tikzpicture}
+
+\end{document}
