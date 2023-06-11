@@ -9,7 +9,7 @@
 \begin{document}
 \title{Integral Area}
 \author{Made By Kenzy}
-\date{\today}
+\date{22nd June, 2023}
 
 \maketitle
 \section{Introduction \& Questions Of The Integral Area}
@@ -62,7 +62,20 @@ By evaluating this integral and dividing it by the length of the interval, we ob
 This concept is particularly useful in areas such as signal processing and statistics, where it allows us to represent the overall behavior of a function over a specific range.
 
 This is just one example of how the integral area is used to calculate average values of functions in various fields.
+\subsection{Trapezoidal Rule}
 
+An example of utilizing the integral area involves the Trapezoidal Rule. This numerical approximation method allows us to estimate the integral area using discrete intervals ($\Delta x$).
+
+For instance, given the integral $\int_{-2}^5 \sqrt{x^2+1} , dx$, the Trapezoidal Rule can be employed:
+
+\begin{equation}
+\int_a^b f(x) , dx \approx \frac{b-a}{n}\left[\frac{f(a)+f(b)}{2}+\sum_{k=1}^{n-1} f\left(a+k \frac{b-a}{n}\right)\right]
+\end{equation}
+
+By dividing the interval $[a, b]$ into smaller subintervals, evaluating the function at the endpoints and intermediate points, and summing up the corresponding areas of trapezoids, we can approximate the integral area.
+
+The Trapezoidal Rule provides a numerical approach to estimate integrals when an exact solution is challenging to obtain.
+\newpage
 \section{Graphical Representation}
 
 The integral area, a fundamental concept in calculus, refers to the total enclosed area under a curve within a specific interval. This graphical representation vividly illustrates the integral area and its significance. 
@@ -97,6 +110,7 @@ The integral area, a fundamental concept in calculus, refers to the total enclos
   \draw (4.5,1.85) node[right, blue] {Integral Area};
 \end{tikzpicture}
 \end{center}
+
 \section{Conclusion}
 
 In conclusion, the integral area is a fundamental concept in calculus. It represents the total enclosed area under a curve within a specific interval and has various applications in physics, engineering, statistics, and other fields.
@@ -105,6 +119,8 @@ By evaluating definite integrals, we can calculate physical quantities, solve di
 
 Overall, the integral area is a powerful tool that plays a crucial role in understanding and solving a wide range of problems. It serves as a cornerstone of quantitative reasoning and problem-solving, making it essential for anyone delving into the depths of mathematics and its applications.
 
+\section{Flow Chart}
+ \includegraphics[width= 1.2\textwidth]{Flowchart.png}
 \section{Code Implementation}
 The following C++ program calculates the integral of a function over a given interval using numerical methods.
 
@@ -142,5 +158,6 @@ The for loop iterates over each interval. In each iteration, the left and right 
 Finally, the function returns the calculated integral. \\
  
 Modify this code according to your specific function and requirements for numerical integration. 
+
 
 \end{document}
