@@ -1169,29 +1169,6 @@
     \end{alignat*}
   \end{spreadlines}
 }
-
-\DeclareFactoid{integral area}{%
-\begin{figure}
-    \centering
-    \begin{tikzpicture}[scale=1.2]
-        \draw[->] (-1,0) -- (5,0) node[right] {$x$};
-        \draw[->] (0,-1) -- (0,5) node[above] {$y$};
-        \draw[thick, domain=0.5:4.5, smooth, variable=\x, red] plot ({\x}, {0.2*\x*\x}) node[right] {$f(x)$};
-        \fill[red!20] (1,0) -- plot[domain=1:4, smooth, variable=\x] ({\x}, {0.2*\x*\x}) -- (4,0) -- cycle;
-        \foreach \x in {1,2,3,4}
-        \draw (\x,-0.1) -- (\x,0.1) node[below=3pt] {\x};
-        \foreach \y in {1,2,3,4}
-        \draw (-0.1,\y) -- (0.1,\y) node[left=3pt] {\y};
-        \draw (2.5,3) node {$\int_a^b f(x) \, dx$};
-        \draw[dashed] (1,0) -- (1,1.8) (4,0) -- (4,3.2);
-        \draw[<->] (1,1.8) -- (4,1.8) node[midway, above] {$b-a$};
-        \draw[->, thick, blue] (0.75,0.5) -- (0.75,1.8);
-        \draw (0.5,1.15) node[left, blue] {Interval $[a, b]$};
-        \draw[->, thick, blue] (4.25,0.5) -- (4.25,3.2);
-        \draw (4.5,1.85) node[right, blue] {Integral Area};
-    \end{tikzpicture}
-\end{figure}
-}
 \DeclareFactoid{Trapezoidal Rule}{%
 An example of utilizing the integral area involves the Trapezoidal Rule. This numerical approximation method allows us to estimate the integral area using discrete intervals ($\Delta x$).
 
