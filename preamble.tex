@@ -703,6 +703,75 @@
 \DeclareFactoid{cross mult}{\factoid{cross multiplication}}
 \DeclareFactoid{butterfly}{\factoid{cross multiplication}}
 
+\DeclareFactoid{Shape}{%
+\begin{tabular}{ccc}
+  \textbf{Shape} & \textbf{Area} & \textbf{Perimeter} \\
+  % circle
+  \tikz [baseline={(d.base)}] {
+    \useasboundingbox (-1.2, -1.2) rectangle (1.2, 1.2);
+    \draw circle (1);
+    \draw [dashed] (0, -1) -- node [left] (d) {$d$} (0, 1) (0, 0) -- node [above] {$r$} (1, 0);
+  }
+  & $A = \pi r^2$ & $P = 2\pi r$ \\
+
+  % rectangle
+  \tikz [baseline={(r.base)}] {
+    \useasboundingbox (-1.2, -1.2) rectangle (1.2, 1.2);
+    \draw (-1, -0.618)
+      -- node [above] {$b$} (1, -0.618)
+      -- node [left] (r) {$h$} (1, 0.618)
+      -- (-1, 0.618)
+      -- cycle;
+  }
+  & $A = bh$ & $P = 2b + 2h$ \\
+
+  % p-gram
+  \tikz [baseline={(p.base)}] {
+    \useasboundingbox (-1.2, -1.2) rectangle (1.2, 1.2);
+    \draw (-1, -0.88)
+      -- (0.5, -0.88) node [pos=0.4, above] {$b$}
+      -- (1, 0.88) node [midway] (p){}
+      -- (-0.5, 0.88)
+      -- cycle;
+    \draw[dashed] (0.2,-0.88) -- (0.2,0.88) node [pos=0.6, right]{$h$}
+  }
+  & $A = bh$ & (varies) \\
+
+  % triangle
+  \tikz [baseline={(t.base)}] {
+    \useasboundingbox (-1.2, -1.8) rectangle (1.2, 1.2);
+    \draw (-1,-1) -- (1,-1) node [midway, below]{$b$} -- (0,1) -- cycle;
+    \draw[dashed] (0,-1) -- (0,1) node [pos=0.4, left]{$h$};
+    \draw (0,0) node(t){};
+  }
+  & $A = \frac12bh$ & (varies) \\
+
+  % sector
+  \tikz [baseline={(sector.base)}] {
+    \useasboundingbox (-1.2, -1.2) rectangle (1.2, 1.2);
+    \draw (0,0) node(sector){};
+    \draw (0,-1) -- (1.414, -1+1.414) node [midway, above] {$r$}
+      arc (45:135:2)
+      -- cycle;
+    \draw (0+1.414*0.1, -1+1.414*0.1) arc (45:135:0.2) node[midway, above] {$\theta$};
+  }
+  & $A = \frac12r^2\theta$ & $P = 2r + r\theta$ \\
+
+  % trapezoid
+  \tikz [baseline={(trap.base)}] {
+    \useasboundingbox (-1.2, -1.5) rectangle (1.2, 1.5);
+    \draw (0,0) node(trap){};
+    \draw (-1,-1)
+      -- (1,-1) node [midway, below]{$b$}
+      -- (0.5,1)
+      -- (-0.5,1) node [midway, above]{$a$}
+      -- cycle;
+    \draw[dashed] (0,-1) -- (0,1) node [midway, right]{$h$};
+  }
+  & $A = h\left(\frac{a+b}{2}\right)$ & (varies) \\
+
+\end{tabular}
+}
 \DeclareFactoid{wrong reciprocal}{%
   $\frac{1}{x+y} = (x + y)^{-1} $ does not equal $\frac{1}{x} + \frac{1}{y}$
 }
