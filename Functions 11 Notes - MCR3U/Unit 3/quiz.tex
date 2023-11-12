@@ -1,0 +1,101 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{geometry}
+\geometry{letterpaper, margin=1in}
+
+\title{Quick Notes for Tomorrow's Quiz: Quadratics}
+\date{\today}
+
+\begin{document}
+\maketitle
+
+\section{Properties of Quadratics}
+\begin{itemize}
+  \item Vertex: $(h, k)$ is the highest or lowest point on the parabola.
+  \item Axis of Symmetry: $x = h$ is a vertical line that divides the parabola into two symmetric parts.
+  \item Intercepts: $x$-intercepts (zeros) at $(x, 0)$ and $y$-intercept at $(0, f(0))$.
+  \item Second Differences: If the second finite differences of the quadratic sequence are constant, it's a quadratic function.
+  \item Direction of Opening: Upward if $a > 0$, downward if $a < 0$, where $y = ax^2 + bx + c$.
+\end{itemize}
+
+\textbf{Example:}
+Given the quadratic function $f(x) = 2x^2 - 4x + 1$.
+\begin{enumerate}
+  \item Vertex: $h = \frac{-b}{2a} = \frac{-(-4)}{2(2)} = 1$. The vertex is at $(1, f(1)) = (1, -1)$.
+  \item Axis of Symmetry: $x = 1$.
+  \item $x$-Intercepts: Solve $2x^2 - 4x + 1 = 0$ to find the $x$-intercepts.
+  \item $y$-Intercept: $f(0) = 2(0)^2 - 4(0) + 1 = 1$.
+  \item Second Differences: Compute the second finite differences.
+  \item Direction of Opening: Upward ($a = 2 > 0$).
+\end{enumerate}
+
+\section{Changing Forms of Quadratics}
+\begin{itemize}
+  \item Standard Form: $ax^2 + bx + c$
+  \item Vertex Form: $a(x-h)^2 + k$
+\end{itemize}
+
+\textbf{Example:}
+Convert the standard form $y = 3x^2 - 12x + 10$ to vertex form.
+\begin{align*}
+  y &= 3x^2 - 12x + 10 \\
+  y &= 3(x^2 - 4x) + 10 \\
+  y &= 3(x^2 - 4x + 4 - 4) + 10 \\
+  y &= 3((x-2)^2 - 4) + 10 \\
+  y &= 3(x-2)^2 - 12 + 10 \\
+  y &= 3(x-2)^2 - 2
+\end{align*}
+
+\section{Nature of Roots (Discriminants)}
+\begin{itemize}
+  \item Discriminant ($D$) in the quadratic formula: $D = b^2 - 4ac$
+  \item Nature of Roots:
+  \begin{itemize}
+    \item $D > 0$: Two distinct real roots.
+    \item $D = 0$: One real repeated root.
+    \item $D < 0$: No real roots (complex roots).
+  \end{itemize}
+\end{itemize}
+
+\textbf{Example:}
+Find the nature of the roots of the quadratic equation $2x^2 - 3x + 1 = 0$ using the discriminant.
+\begin{align*}
+  D &= b^2 - 4ac \\
+  D &= (-3)^2 - 4(2)(1) = 9 - 8 = 1
+\end{align*}
+Since $D > 0$, there are two distinct real roots.
+
+\section{Solving Quadratic Equations}
+\begin{itemize}
+  \item Quadratic Formula: $x = \frac{-b \pm \sqrt{D}}{2a}$
+  \item Factoring, completing the square, or using the quadratic formula.
+\end{itemize}
+
+\textbf{Example:}
+Solve the quadratic equation $x^2 - 5x + 6 = 0$ using the quadratic formula.
+\begin{align*}
+  a &= 1, \quad b = -5, \quad c = 6 \\
+  D &= b^2 - 4ac = (-5)^2 - 4(1)(6) = 1 \\
+  x &= \frac{-b \pm \sqrt{D}}{2a} \\
+  x &= \frac{5 \pm \sqrt{1}}{2} \\
+  x &= \frac{5 \pm 1}{2}
+\end{align*}
+The solutions are $x = 3$ and $x = 2$.
+
+\section{Quadratic Word Problems}
+Solving real-world problems involving quadratic equations.
+
+\textbf{Example:}
+A ball is thrown into the air from a height of 5 meters with an initial velocity of 20 m/s. The height of the ball at any time $t$ is given by $h(t) = -5t^2 + 20t + 5$. Find when the ball hits the ground (height $h = 0$).
+
+\section{Linear - Quadratic Systems}
+Solving systems of equations where one equation is linear and the other is quadratic.
+
+\textbf{Example:}
+Solve the system of equations:
+\begin{align*}
+  y &= 3x - 2 \\
+  y &= x^2 + 2x - 3
+\end{align*}
+
+\end{document}
