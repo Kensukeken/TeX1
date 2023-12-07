@@ -1,0 +1,59 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage{amsmath,amsfonts,amssymb}
+\usepackage{graphicx}
+\usepackage{pgfplots}
+\begin{document}
+\begin{figure}[H]
+    \centering
+    \begin{tikzpicture}
+        \begin{axis}[
+            xlabel=$x$,
+            ylabel=$y$,
+            zlabel=$z$,
+            xmin=-4, xmax=4,
+            ymin=0, ymax=8,
+            zmin=0, zmax=8,
+            axis lines=middle,
+            axis line style={->},
+            legend style={at={(0.95,0.95)},anchor=north east},
+            grid=both,
+            major grid style={dashed,gray!60},
+            width=0.8\textwidth,
+            height=0.8\textwidth,
+            legend style={font=\small},
+            legend cell align={left},
+            view={40}{30}, % Adjust the view angle
+            colormap/jet, % Use 'hot' colormap
+        ]
+            \addplot3[surf,hot,domain=-4:4,domain y=0:8,shader=interp] {2^x};
+            \addlegendentry{$z = 2^x$}
+        \end{axis}
+    \end{tikzpicture}
+    \qquad
+    \begin{tikzpicture}
+        \begin{axis}[
+            xlabel=$x$,
+            ylabel=$y$,
+            zlabel=$z$,
+            xmin=-4, xmax=4,
+            ymin=0, ymax=8,
+            zmin=0, zmax=8,
+            axis lines=middle,
+            axis line style={->},
+            legend style={at={(0.95,0.95)},anchor=north east},
+            grid=both,
+            major grid style={dashed,gray!60},
+            width=0.8\textwidth,
+            height=0.8\textwidth,
+            legend style={font=\small},
+            legend cell align={left},
+            view={40}{30}, % Adjust the view angle
+            colormap/hot, % Use 'hot' colormap
+        ]
+            \addplot3[surf,hot,domain=-4:4,domain y=0:8,shader=interp] {(1/2)^x};
+            \addlegendentry{$z = \left(\frac{1}{2}\right)^x$}
+        \end{axis}
+    \end{tikzpicture}
+    \caption{Growth and Decay in 3D Plot}
+\end{figure}
+\end{document}
