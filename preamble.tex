@@ -13,7 +13,6 @@
 
 % Required to support mathematical unicode
 \usepackage[warnunknown, fasterrors, mathletters]{ucs}
-\usepackage[utf8x]{inputenc}
 \usepackage[cm]{fullpage}
 \usepackage[english]{babel}
 % Always typeset math in display style
@@ -1515,3 +1514,5 @@ $\psi_t(y)=\int \psi_0(x) \int_x^y e^{i S / \hbar} D[x] \mathrm{d} x$
 \usepackage[version=4]{mhchem}
 \usepackage{esint}
 \usepackage{tikz-3dplot}
+\newcommand{\clt}[2]{\textcolor{#1}{#2}}
+\usepackage{tikz-feynman}
