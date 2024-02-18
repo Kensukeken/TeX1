@@ -1,0 +1,533 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage{amsmath,amsfonts,amssymb}
+\usepackage{graphicx}
+\usepackage{enumitem}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{pgfplots}
+\usepackage{hyperref}
+\usepackage{soul}
+\usepackage{framed}
+\usepackage{booktabs} 
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage{adjustbox}
+\usepackage{siunitx}
+\usepackage{subcaption}
+\usepackage{tikz}
+\usepackage{float}
+\usepackage{cancel}
+\usepackage{booktabs} 
+\usepackage{array}
+\usetikzlibrary{arrows}
+\usetikzlibrary{shapes}
+\newcommand{\mymk}[1]{%
+  \tikz[baseline=(char.base)]\node[anchor=south west, draw,rectangle, rounded corners, inner sep=2pt, minimum size=7mm,
+    text height=2mm](char){\ensuremath{#1}} ;}
+
+\newcommand*\circled[1]{\tikz[baseline=(char.base)]{
+            \node[shape=circle,draw,inner sep=2pt] (char) {#1};}}
+
+
+\renewcommand{\arraystretch}{1.5}
+\setlength{\tabcolsep}{12pt}
+
+\newlist{arrowlist}{itemize}{1}
+\setlist[arrowlist]{label=$\Rightarrow$}
+
+\definecolor{lessonbgcolor}{rgb}{0.9,0.9,1}
+\definecolor{examplecolor}{rgb}{0.8,1,0.8}
+\definecolor{noteboxcolor}{rgb}{1,0.8,0.8}
+\newenvironment{lesson}[1]
+  {\begin{framed}\colorbox{lessonbgcolor}{
+  \parbox{\dimexpr\linewidth-2\fboxsep}{
+  \textbf{#1}}}\end{framed}}
+  
+\newenvironment{example}
+  {\begin{framed}\colorbox{examplecolor}{
+  \parbox{\dimexpr\linewidth-2\fboxsep}{
+  \textbf{Example:}}}}
+  {\end{framed}}
+\newenvironment{note}
+  {\begin{framed}\colorbox{noteboxcolor}{
+  \parbox{\dimexpr\linewidth-2\fboxsep}{
+  \textbf{Note:}}}}
+  {\end{framed}}
+\newenvironment{GS}[1]
+{\subsection*{#1}\begin{minipage}{0.9\linewidth}\raggedright}
+{\end{minipage}}  
+
+\usepackage{mathtools}
+\usepackage[
+  amsmath
+]{empheq}
+\usepackage{xcolor}
+
+\definecolor{shadecolor}{cmyk}{0,0,0.45,0}
+\definecolor{light-blue}{cmyk}{0.25,0,0,0}
+\newsavebox{\mysaveboxM}
+\newsavebox{\mysaveboxT}
+\newcommand*\Garybox[2][Log law]{%
+  \sbox{\mysaveboxM}{#2}%
+  \sbox{\mysaveboxT}{\fcolorbox{black}{light-blue}{#1}}%
+  \sbox{\mysaveboxM}{%
+    \parbox[b][\ht\mysaveboxM+0.5\ht\mysaveboxT+0.5\dp\mysaveboxT][b]{%
+      \wd\mysaveboxM}{#2}%
+  }%
+  \sbox{\mysaveboxM}{%
+    \fcolorbox{black}{shadecolor}{%
+      \makebox[\linewidth-17.5em]{\usebox{\mysaveboxM}}%
+    }%
+  }%
+  \usebox{\mysaveboxM}%
+  \makebox[0pt][r]{%
+    \makebox[\wd\mysaveboxM][c]{%
+      \raisebox{\ht\mysaveboxM-0.5\ht\mysaveboxT
+                +0.5\dp\mysaveboxT-0.5\fboxrule}{\usebox{\mysaveboxT}}%
+    }%
+  }%
+}
+\definecolor{darkgreen}{RGB}{0, 100, 0}
+  
+
+\pgfplotsset{width=7cm,compat=1.17}
+
+\begin{document}
+\section*{Sequences and series}
+\begin{lesson}{Discrete functions - Sequences and series}
+    \begin{arrowlist}
+        \item Sequence - An ordered list of numbers (e.g., $2, 5, 8, 11, \ldots$)
+        \item Term - A number in a sequence (e.g., $t_1 =$ first term, $t_{10} =$ tenth term)
+        \item Arithmetic sequence $\Rightarrow$ A sequence that has the same difference ($d$) between any pair of consecutive terms.
+
+    \begin{example}
+        \[\underbrace{2, 5, 8, 11, \ldots}_{\textcolor{blue}{\text{Common difference of 3}}}\]
+    \end{example}
+
+    \item General term - A formula, labeled $t_n$, that expresses each term of a sequence as a function of its position.
+
+    \begin{example}
+        $2, 4, 6, 8, 10, \ldots$ has a general term of $t_n = 2n$.\\
+        \begin{align*}
+            t_1 &=2(1) =2 \\
+            t_4 &= 2(4) =8 \\
+            t_{24} &=2(24) = 48
+        \end{align*}
+    \end{example}
+    \item The general term for an arithmetic sequence is:
+    \begin{center}
+\begin{minipage}{0.4\textwidth}
+\begin{equation*}
+    t_n=a+(n-1)d
+\end{equation*}
+\end{minipage}%
+\begin{minipage}{0.6\textwidth}
+Where:
+\begin{itemize}
+    \item a is the first term.
+    \item d is the common difference 
+    \item n is the term \# 
+\end{itemize}
+\end{minipage}
+\end{center}
+\end{arrowlist}
+\end{lesson}
+\begin{example}
+    \underline{\textbf{Ex.1:}}
+    \begin{enumerate}[label=\alph*.]
+        \item Find the general term for the arithmetic sequence:
+        \item Find $t_9$ (the $9^{th}$ term)
+    \end{enumerate}
+    
+    \begin{enumerate}[label=\roman*)]
+        \item $10, 14, 18, 22, \ldots$
+        \begin{enumerate}[label=\alph*.]
+            \item 
+            \begin{align*}
+                &\text{\textcolor{blue}{Given:}} \quad a = 10 \text{ (first term)} \\
+                &t_n = 10 + (n-1)(4)
+            \end{align*}
+            \item 
+            \begin{align*}
+                t_9 &= a + (9-1)d \\ 
+                &= 10 + 8(4) \\ 
+                &= 42 \\
+                &\boxed{\therefore\ t_9 = 42}
+            \end{align*}
+        \end{enumerate}
+        \item $-33, -23, -13, -3, 7, \ldots$
+        \begin{enumerate}[label=\alph*.]
+            \item 
+            \begin{align*}
+                &\text{\textcolor{blue}{Given:}} \quad a = -33 \text{ (first term)} \\
+                &d = t_2 - t_1 \quad \text{\textcolor{blue}{(common difference)}} \\
+                &= -23 - (-33) \\
+                &= 10 \\
+                &t_n = -33 + (n-1)(10) \\
+                &= 10n - 43
+            \end{align*}
+            \item 
+            \begin{align*}
+                t_9 &= -33 + (9-1)(10) \\
+                &= -33 + 8(10) \\
+                &= -33 + 80 \\
+                &= 47 \\
+                &\boxed{\therefore\ t_9 = 47}
+            \end{align*}
+        \end{enumerate}
+    \end{enumerate}
+\end{example}
+\begin{example}
+    \underline{Ex.2:} Find the $33^{3rd}$ term in the sequence 18, 11, 4, -3, $\ldots$. \\ 
+    Solution:
+    \begin{align*}
+        a &=10 \\
+        d&= -7 && t_n=18+(n-1)(-7) \\ 
+        t_{33}&=18+(33-1)(-7)\\
+        &=18+(33)(-7)\\
+        &=18-224\\
+        & \boxed{t_{33}=-206}
+    \end{align*}
+\end{example}
+\begin{example}
+    \underline{Ex.3:} Find the \# of terms in the sequence.
+
+\begin{center}
+    \begin{minipage}{0.4\textwidth}
+\begin{equation*}
+    \underbrace{\text{31, 27}}_{\textcolor{red}{-4}}, \underbrace{\text{27, 23}}_{\textcolor{red}{-4}}, \underbrace{\text{23, 19}}_{\textcolor{red}{-4}}, \ldots, -53
+\end{equation*}
+        \vspace{1ex} 
+        $\therefore$ \textcolor{red}{\text{arithmetic}}
+    \end{minipage}%
+    \begin{minipage}{0.6\textwidth}
+        \begin{enumerate}
+            \item Make a general term.
+            \item Substitute in $-53$.
+            \item Solve for $n$.
+        \end{enumerate}
+    \end{minipage}
+\end{center}
+\begin{align*}
+    a &= 31, \quad d= -4 & 84 &= (n-1)(-4)\\
+    t_n &= 31 + (n-1)(-4) & 21 &= n-1\\
+    &\text{(sub in $-53$ for $t_n$)} \quad & 22 &= n \\
+    -53 &= 31 + (n-1)(-4) & \therefore \quad & \text{There are 22 terms}\\
+    &\text{(solve for $n$)}
+\end{align*}
+\end{example}
+\newpage 
+\begin{example}
+    \underline{Ex.4} For an arithmetic sequence, $t_7=53$ and $t_n=97$. Find $t_{100}$.\\
+    \underline{\textcolor{blue}{Solution \circled{1} :}}
+    \begin{align*}
+        t_7 &= \textcolor{red}{53} \quad && t_{11} = \textcolor{red}{97}  \\
+        a + (n-1)d &= \textcolor{red}{53} \quad && a + (11-1)d = \textcolor{red}{97}  \\
+        a + (7-1)d &= \textcolor{red}{53} \quad && a + 10d = \textcolor{red}{97} \quad \circled{2} \\
+        a + 6d &= \textcolor{red}{53} \quad \circled{1}
+    \end{align*}
+  \begin{minipage}[t]{0.48\textwidth}
+        $\begin{array}{ccccc}
+             & \textcolor{blue}{\text{Using elimination}} \\
+             & \textcolor{cyan}{\circled{2}} \quad a + 10d = \textcolor{orange}{97} \\
+             & \textcolor{cyan}{\circled{1}} \quad a + 6d = \textcolor{orange}{53} \\
+             \hline \
+             & \quad \textcolor{purple}{4d = 44} \\
+             & \quad \textcolor{purple}{d = 11}
+        \end{array}$
+        \begin{align*}
+            &\textcolor{blue}{\text{Substitute }} d=11 \textcolor{blue}{\text{ into }} \textcolor{cyan}{\circled{1}} \\
+            a + 6(11) &= \textcolor{orange}{53} \\
+            a &= \textcolor{orange}{53 - 66} \\
+            a &= \textcolor{orange}{-13}
+        \end{align*}
+    \end{minipage}%
+    \begin{minipage}[t]{0.48\textwidth}
+        \begin{align*}
+            t_n &= \textcolor{orange}{-13 + (n-1)(11)} \\
+            t_{100} &= \textcolor{orange}{-13 + (99)(11)} \\
+            t_{100} &= \textcolor{orange}{1076} \\
+        \end{align*}
+        Once we found $d=11$,
+        \begin{align*}
+            t_7 + 93d &= \textcolor{orange}{t_{100}} \\
+            \textcolor{red}{53 + 93(11)} &= \textcolor{orange}{t_{100}} \\
+            t_{100} &= \textcolor{orange}{1076}
+        \end{align*}
+        Or,
+        \begin{align*}
+            t_{100} &= \textcolor{red}{t_{11}} + 89d \\
+            &= \textcolor{red}{97 + 89(11)} \\
+            &= \textcolor{orange}{1076}
+        \end{align*}
+    \end{minipage}
+    \newpage
+ \underline{\textcolor{blue}{Solution \circled{2} :}}
+    \begin{align*}
+        &\textcolor{purple}{\underbrace{t_{11}-t_7=4d}_{\text{proof}}}\\
+        &(a+10d)(a+6d)\\
+        &=10d-6d\\
+        &=4d
+    \end{align*}
+    \begin{align*}
+        t_{11}-t_7=4d && t_{100}=t_7+93d\\
+        \textcolor{red}{97-53=4d} && =\textcolor{red}{53 +93(11)}\\
+        \textcolor{purple}{44=4d} &&=\textcolor{purple}{1076} \\
+        \textcolor{purple}{11=d}
+    \end{align*}
+\end{example}
+\begin{example}
+     \underline{Ex.5:} For an arithmetic sequence: $t_4=19$ and $t_{21}=-49$. Find $t_{38:}$\\
+     \begin{align*}
+         t_{21}-t_{4}&=17d && t_{38}=t_{21}+17d && t_{38}=t_{4}+34d\\
+         -49-19&=17d &&=49+17(-4)&& =19+34(-4)\\
+         -68&=17d && t_{38}=-117&& =-117\\
+         -4&=d &
+     \end{align*}
+\end{example}
+\newpage
+\begin{lesson}{Arithmetic sequence (cont'd)}
+    Recursive sequence $\Rightarrow$ a sequence for which one term(or more) is given and each successive term is determined from the previous term(s).\\ \\
+    For an arithmetic formula sequence the recursive formula:
+    \begin{equation*}
+        \boxed{t_1=a,t_n=t_{n-1}+d, n \in \mathbb{N}, n>1}
+    \end{equation*}
+    \underline{\hl{Recall:}} 1, 1, 2, 3, 5, 8\\
+    $$t_1=,t_2=1,t_n=t_{n-1}+t_{n+2}, n \in \mathbb{N}, n >2$$
+\end{lesson}
+\begin{example}
+    \underline{Ex.1:} Write the recursive formula for each arithmetic sequence 
+    \begin{enumerate}[label=\alph*.]
+        \item 5,11,17,23, $\ldots$
+        \begin{equation*}
+            t_1=5, t_n=t_n=t_{n-1}+6, n \in \mathbb{N}, n>1
+        \end{equation*}
+        \item $\frac{1}{2}$, $\frac{-1}{2}$, $\frac{-3}{2}$, $\frac{-5}{2}$, $\ldots$
+        \begin{equation*}
+            t_1=\frac{1}{2}, t_n=t_n=t_{n-1}+1, n \in \mathbb{N}, n>1
+        \end{equation*}        
+    \end{enumerate}
+\end{example}
+\begin{example}
+    \underline{Ex.2:} Write the first 4 terms of the sequence
+    \begin{enumerate}[label=\alph*.]
+        \item $t_1=80, t_n=t_{n-1}-8, n\in \mathbb{N}, n>1$
+        \begin{equation*}
+            80, 72, 64, 56, \ldots 
+        \end{equation*}
+    \end{enumerate}
+\end{example}
+\newpage
+\begin{lesson}{Geometric sequence}
+    \begin{arrowlist}
+        \item Recursive sequence in which noew terms are created by multiplying the previous terms by the same value(common ratio).
+    \end{arrowlist}
+\end{lesson}
+\begin{example}
+    2, 6 , 18, 54, $\dots$\\
+    a=2 first term \quad Common ratio (r)=3 since $\frac{t_2}{t_1}=\frac{t_3}{t_2}=\frac{t_4}{t_3}=3$
+\end{example}
+General term $\Rightarrow t_n=ar^{n-1}$ 
+\begin{align*}
+\therefore t_1&=ar^{1-1} && t_2=ar^{2-1} && t_3=ar^{3-1} && t_4=ar^{4-1} &&\text{AND} \\
+t_1&=ar^{0} && t_2=ar^1 && t_3=ar^{2} && t_4=ar^3 && \text{SO} \\
+t_1&=a && t_2=ar &&&&&& \text{ON!} \\
+\end{align*}
+\begin{equation*}
+    \overbrace{a }^{\times \text{r}}, \overbrace{ar }^{\times \text{r}}, \overbrace{ar^2}^{\times \text{r}}, \overbrace{ar^3 }^{\times \text{r}}, \overbrace{ar^4 }^{\times \text{r}}, \ldots
+\end{equation*}
+\subsubsection*{Recursive Formula:}
+\begin{equation*}
+    t_1=,t_n=(t_{n-1})(r), n \in \mathbb{N}, n>1
+\end{equation*}
+\begin{example}
+    \underline{Ex.1:} For the sequence: $2, 6, 18, 53$
+    \begin{enumerate}[label=(\alph*), align=left, left=0pt, labelwidth=1.5em, labelsep=1em]
+        \item Determine recursive formula: 
+        \[
+        t_1 = 2, \quad t_n = (t_{n-1}) (3), n \in \mathbb{N}, \; n > 1
+        \]
+        \item General term: 
+        \[
+        t_n = 2 (3)^{n-1}
+        \]
+        \item $t_{10}$
+        \begin{align*}
+            t_{10} &= 2 \cdot 3^{10-1} \\
+                   &= 2 \cdot 3^9 \\
+                   &= 39,366
+        \end{align*}
+    \end{enumerate}
+\end{example}
+\section*{Arithmetic Series}
+\subsection*{Understanding Arithmetic Series}
+
+In the enchanting realm of numbers, where mathematical secrets unfold, arithmetic series takes center stage—a symphony of terms in an arithmetic dance with a prescribed number of steps.
+
+\subsection*{The Tale of Mr. L. Lenarduzzi}
+
+Allow me to transport you to the nostalgic corridors of my school days, where the protagonist is none other than Mr. L. Lenarduzzi, our revered math maestro. The tale unfurls during my 11 grade adventures when Mr. Lenarduzzi unraveled a mesmerizing story about the arcane wonders of arithmetic series.
+
+"In the 3rd grade, amidst the realms of multiplication and division within 100, my teacher, whom I'll refer to as 'my teacher,' presented me with a worksheet—a challenge I met with swift prowess. 'I finished it, ma'am,' I declared confidently.
+
+Surprising her, she handed me another, and then another, as my quick triumphs seemed to amuse and intrigue. To test my mettle further, she laid down a gauntlet: write down the numbers from 1 to 100 and find their sum. Unfazed, I embraced the challenge, boldly declaring the sum as 5050.
+
+Intrigued and desiring to unveil the mystery of my method, she beckoned me to the board. There, I began illustrating the series:"
+
+\begin{center}
+    \begin{align*}
+        &1+2+3+\ldots+98+99+100 \\
+        &100+99+98+\ldots+3+2+1 \\
+        \cmidrule(lr){1-4} &&&& \\[-1.5ex]
+        &101+101+101+\ldots+101+101+101
+    \end{align*}
+\end{center}
+
+
+With the class held in suspense, the teacher inquired, 'Where's the answer?' I calmly responded, 'I'm not done yet,' and she patiently agreed, saying, 'Okay, I'm waiting.' Continuing, I unveiled the calculation.
+
+In the enchanting realm of mathematics, Mr. L. Lenarduzzi, a maestro of numbers, found himself at the intersection of curiosity and calculation. Eager to unravel the mysteries of arithmetic, he embarked on a journey to summon the elusive formula for the sum of the first 100 natural numbers: 
+\[\frac{n \times (n+1)}{2}\]. The cryptic allure of this formula lay in its ability to unveil the cumulative magic hidden within a sequence, where \(n\) represented the final term.
+
+With a twinkle of mathematical intuition, Mr. Lenarduzzi delved into the heart of the formula, substituting \(n = 100\) and conjuring forth the mystical expression:
+
+\begin{align*}
+    \frac{101 \times 100}{2}
+\end{align*}
+
+As the room fell silent, Mr. Lenarduzzi initiated his mathematical incantation:
+
+\begin{align*}
+    \frac{101 \times \cancelto{50}{100}}{\cancel{2}}
+\end{align*}
+
+A wave of understanding cascaded through the students. What was this magical transformation? Mr. Lenarduzzi, wearing an enigmatic smile, unraveled the mystery.
+
+"Behold the power of cancellation," he proclaimed. "See how the common factor of 2 gracefully cancels out, leaving us with a simplified expression."
+
+The chalkboard now showcased the enchanting result:
+
+\begin{align*}
+    \boxed{5050}
+\end{align*}
+
+A curious student queried, 'But what happened to the 100?'
+
+"With a touch of mathematical finesse," Mr. Lenarduzzi explained, "we transformed the 100 into its essence, revealing its secret identity as 50. By canceling out the common factor, we unveiled the faster path to our answer – the mystical number 5050."
+
+The students marveled at the elegance of this mathematical metamorphosis. The chalkboard, now not just a canvas for numbers but a portal to a world of mathematical wonders, held a narrative of discovery and revelation.
+
+And so, in the echoes of that enchanted classroom, the legend of cancellation lived on – a tale whispered among students as a key to unlocking the wonders hidden within arithmetic.
+
+As whispers of awe spread among the students, a glimmer of uncertainty crossed 'my teacher's' face. She had handed a prodigious mind a challenge, and now, she grappled with the realization that her student's mathematical prowess surpassed even her expectations. Acknowledging his genius, she adorned him with a medal, a silent tribute to the prodigy who had illuminated the classroom with the brilliance of arithmetic.
+
+
+\begin{lesson}{Arithmetic Series}
+    An arithmetic series is the sum of the terms in an arithmetic sequence with a definite number of terms.\\
+
+    \begin{minipage}{0.5\textwidth}
+        Formula: 
+        \begin{equation*}
+        S_n=\frac{\overset{\substack{ \\ \text{\# of terms}\\\uparrow}}{n}(\overset{\substack{ \\ \text{first}\\\uparrow}}{t_1}+\overset{\substack{\\ \text{last}\\\uparrow}}{t_n})}{2}
+        \end{equation*}
+    \end{minipage}%
+    \begin{minipage}{0.5\textwidth}
+        \begin{itemize}
+            \item $S_n$ is partial.
+            \item Sum the first
+            \item $n$ terms of a sequence.
+        \end{itemize}
+    \end{minipage}
+        $\lfloor\!\underrightarrow{\quad}$ Series $\to$ The sum of the terms of a sequences.\\
+        
+\underline{\textcolor{blue}{For Ex:}} The sequence $2, 4, 8, \ldots$ is an arithmetic sequence, and its sum $2 + 4 + 8 + \ldots$ forms an arithmetic series.
+\end{lesson}
+\begin{example}
+    \underline{Ex.1:} Find the sum: 10+20+30+\ldots+150\\
+    \underline{Sol'n:}
+    \begin{align*}
+        S_n&= \frac{15(10+150)}{2}\\
+        S_n&=\frac{15(160)}{2}\\
+        &=15(80)\\
+        &=1200
+    \end{align*}
+\end{example}
+
+\begin{equation*}
+    S_n=\frac{n(t_1+t_2)}{2}
+\end{equation*}
+Works well when know the first, last and \# of terms.
+Replace: $t_1$ with "a" $t_n$ with "a+(n-1)d".
+\[S_n=\frac{n[a+a(n-1)d]}{2} \quad \rightrightarrows \quad  S_n=\frac{n[2a+(n-1)d]}{2}\]
+\newpage
+\subsection*{Property of Arithmetic Sequences}
+\begin{equation*}
+    t_a+t_b=t_c+t_d \quad \text{if } a+b=c+d
+\end{equation*}
+\underline{For Ex:} \\
+$t_4+t_{10}=t_6+t_8$
+\begin{figure}[ht]
+\begin{minipage}{0.45\textwidth}
+    \centering
+    $\begin{array}{ccccc}
+        & \quad t_4 = \textcolor{orange}{a+3d} \\
+        & \quad t_{10} = \textcolor{orange}{a+9d} \\
+        \hline \
+        & \quad \textcolor{purple}{t_4+t_{10}=2a+12d}
+    \end{array}$
+\end{minipage}
+\hfill
+\begin{minipage}{0.45\textwidth}
+    \centering
+    $\begin{array}{ccccc}
+        & \quad t_6 = \textcolor{orange}{a+5d} \\
+        & \quad t_8 = \textcolor{orange}{a+7d} \\
+        \hline \
+        & \quad \textcolor{purple}{t_6+t_8=2a+12d}
+    \end{array}$
+\end{minipage}
+\end{figure}
+\subsection*{Property for Geometric Sequence}
+
+\begin{minipage}[t]{0.5\linewidth}\raggedright
+    \begin{equation*}
+        \textcolor{blue}{t_a \cdot t_b = t_c \cdot t_d \quad \text{if} \quad a+b=c+d}
+    \end{equation*}
+    \text{\underline{For Ex:}}\\
+    \textcolor{red}{\[t_5 \cdot t_8 = t_8 \cdot t_{11}\]}
+    \textcolor{purple}{Or}
+    \textcolor{orange}{\[t_{10} \cdot t_{15} = t_{5} \cdot t_{20}\]}
+\end{minipage}%
+\begin{minipage}[t]{0.3\linewidth}\raggedright
+\[
+\left.\begin{matrix}
+    t_5=ar^4\\
+    t_8=ar^7
+\end{matrix}\right\}t_5\cdot t_8=ar^4\cdot ar^7=a^2r^{11}
+\]
+
+
+\[
+\left.\begin{matrix}
+    t_2=ar\\
+    t_8=ar^{10}
+\end{matrix}\right\}t_2\cdot t_{11}=ar\cdot ar^{10}=a^2r^{11}
+\]
+    
+\end{minipage}
+
+\begin{GS}{Geometric Series}
+    \begin{minipage}[t]{0.45\linewidth}
+        \textbf{Geo Sequence:} 
+        \[2, 6, 18, 54, 162, \ldots\] with \(r=3\)
+
+        \[-\frac{1}{3}, 2, -16, 128, \ldots\] with \(r=-8\)
+    \end{minipage}%
+    \begin{minipage}[t]{0.45\linewidth}
+        \textbf{Geo Series:}
+        \[2+6+18+54+162+\ldots\]
+
+        \[-\frac{1}{4}+2-16+128-\ldots\]
+    \end{minipage}
+    \[S_n = \frac{a(r^n-1)}{r-1}\]
+\end{GS}
+\end{document}
