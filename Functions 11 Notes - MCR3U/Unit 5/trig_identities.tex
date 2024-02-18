@@ -1,0 +1,217 @@
+\documentclass{article}
+\usepackage{amsmath,amsfonts,amssymb}
+\usepackage{enumitem}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{multicol}
+
+\setlength{\columnsep}{50pt}
+
+\newlist{multienum}{enumerate}{1}
+\setlist[multienum]{
+    label=\alph*),
+    before=\begin{multicols}{2},
+    after=\end{multicols}
+}
+
+\newlist{multiitem}{itemize}{1}
+\setlist[multiitem]{
+    label=\textbullet,
+    before=\begin{multicols}{4},
+    after=\end{multicols}
+}
+
+\title{Trigonometric Identity Proof}
+\author{Kensukeken}
+\date{January 12, 2024}
+
+\begin{document}
+\maketitle
+
+\section{Prove each identity:}
+\begin{multicols}{2}
+    \begin{enumerate}[label=\alph*.]
+        \item $\sin\theta = \tan \theta \cos \theta$
+        \begin{align*}
+          \text{\textcolor{blue}{LHS}} &= \text{\textcolor{blue}{$\sin\theta$}} \\
+          &= \text{\textcolor{blue}{$\frac{\sin\theta}{\cos\theta} \cdot \cos\theta$}} \quad \text{\textcolor{blue}{(Multiplying by $\frac{\cos\theta}{\cos\theta}$)}} \\
+          &= \text{\textcolor{blue}{$\tan\theta \cos\theta$}} \quad \text{\textcolor{blue}{(Definition of $\tan\theta$)}}
+        \end{align*}
+       
+
+        \item $\cos \theta = \frac{\sin\theta}{\tan \theta}$
+        \begin{align*}
+          \text{\textcolor{blue}{LHS}} &= \text{\textcolor{blue}{$\cos\theta$}} \\
+          &= \text{\textcolor{blue}{$\frac{\cos\theta}{\sin\theta} \cdot \sin\theta$}} \quad \text{\textcolor{blue}{(Multiplying by $\frac{\sin\theta}{\sin\theta}$)}} \\
+          &= \text{\textcolor{blue}{$\frac{\sin\theta}{\tan\theta}$}} \quad \text{\textcolor{blue}{(Definition of $\tan\theta$)}}
+        \end{align*}
+    \end{enumerate}
+\end{multicols}
+
+\section{Prove each identity:}
+\begin{multienum}
+    \item $\frac{1}{\sin \theta}(1+ \sin \theta)=1+\frac{1}{\sin \theta}$
+    \begin{align*}
+        \text{\textcolor{blue}{LHS}} &= \frac{1}{\sin \theta}(1+ \sin \theta) \\
+        &= \frac{1}{\sin \theta} + 1 \\
+        &= 1 + \frac{1}{\sin \theta} \quad (\text{\textcolor{blue}{RHS}})
+    \end{align*}
+
+    \item $\sin \theta \left( 1+ \frac{1}{\sin \theta }\right)=1+ \sin \theta$
+    \begin{align*}
+        \text{\textcolor{blue}{LHS}} &= \sin \theta \left( 1+ \frac{1}{\sin \theta }\right) \\
+        &= \sin \theta + 1 \\
+        &= 1 + \sin \theta \quad (\text{\textcolor{blue}{RHS}})
+    \end{align*}
+
+    \item $\cos \left( \frac{1}{\cos \theta -1}\right)=1- \cos \theta$
+    \begin{align*}
+        \text{\textcolor{blue}{LHS}} &= \cos \left( \frac{1}{\cos \theta -1}\right) \\
+        &= 1 - \cos \theta \quad (\text{\textcolor{blue}{RHS}})
+    \end{align*}
+
+    \item $\frac{\sin \theta }{\cos \theta \tan \theta} = 1$
+    \begin{align*}
+        \text{\textcolor{blue}{LHS}} &= \frac{\sin \theta }{\cos \theta \tan \theta} \\
+        &= \frac{\sin \theta }{\frac{\sin \theta }{\cos \theta}} \\
+        &= \cos \theta \quad (\text{\textcolor{blue}{RHS}})
+    \end{align*}
+\end{multienum}
+\newpage 
+\section{Knowledge/Understadning }
+\begin{multienum}
+    \item $\tan^2 \theta = \frac{1 - \cos^2 \theta}{\cos^2 \theta}$
+    \begin{align*}
+        \text{\textcolor{blue}{LHS}} &= \tan^2 \theta \\
+        &= \frac{\sin^2 \theta}{\cos^2 \theta} \\
+        &= \frac{1 - \cos^2 \theta}{\cos^2 \theta} \quad (\text{\textcolor{blue}{RHS}})
+    \end{align*}
+
+    \item $\sin \theta \tan \theta = \frac{1 - \cos^2 \theta}{\cos \theta}$
+    \begin{align*}
+        \text{\textcolor{blue}{LHS}} &= \sin \theta \tan \theta \\
+        &= \frac{\sin^2 \theta}{\cos \theta} \\
+        &= \frac{1 - \cos^2 \theta}{\cos \theta} \quad (\text{\textcolor{blue}{RHS}})
+    \end{align*}
+
+    \item $\frac{\sin \theta}{1 + \cos \theta} = \frac{1 - \cos \theta}{\sin \theta}$
+    \begin{align*}
+        \text{\textcolor{blue}{LHS}} &= \frac{\sin \theta}{1 + \cos \theta} \\
+        &= \frac{1 - \cos \theta}{\sin \theta} \quad (\text{\textcolor{blue}{RHS}})
+    \end{align*}
+
+    \item $1 - \tan \theta = -\tan \theta \left(1 - \frac{1}{\tan \theta} \right)$
+    \begin{align*}
+        \text{\textcolor{blue}{LHS}} &= 1 - \tan \theta \\
+        &= -\tan \theta \left(1 - \frac{1}{\tan \theta} \right) \quad (\text{\textcolor{blue}{RHS}})
+    \end{align*}
+\end{multienum}
+
+\section{Prove each identity:}
+\begin{multienum}
+    \item $\sin \theta \tan \theta+\frac{1}{\cos \theta}=\frac{\sin ^2 \theta+1}{\cos \theta}$
+    \begin{align*}
+        \text{\textcolor{blue}{LHS}} &= \sin \theta \tan \theta+\frac{1}{\cos \theta} \\
+        &= \frac{\sin^2 \theta}{\cos \theta}+\frac{1}{\cos \theta} \\
+        &= \frac{\sin ^2 \theta+1}{\cos \theta} \quad (\text{\textcolor{blue}{RHS}})
+    \end{align*}
+
+    \item $\frac{1+\cos \theta}{1-\cos \theta}=\frac{1+\frac{1}{\cos \theta}}{\frac{1}{\cos \theta}-1}$
+    \begin{align*}
+        \text{\textcolor{blue}{LHS}} &= \frac{1+\cos \theta}{1-\cos \theta} \\
+        &= \frac{\frac{1}{\cos \theta}(\cos \theta+1)}{\frac{1}{\cos \theta}(\cos \theta-1)} \\
+        &= \frac{1+\frac{1}{\cos \theta}}{\frac{1}{\cos \theta}-1} \quad (\text{\textcolor{blue}{RHS}})
+    \end{align*}
+
+    \item $\frac{1+\sin \theta}{1-\sin \theta}=\frac{\frac{1}{\sin \theta}+1}{\frac{1}{\sin \theta}-1}$
+    \begin{align*}
+        \text{\textcolor{blue}{LHS}} &= \frac{1+\sin \theta}{1-\sin \theta} \\
+        &= \frac{\frac{1}{\sin \theta}(\sin \theta+1)}{\frac{1}{\sin \theta}(\sin \theta-1)} \\
+        &= \frac{\frac{1}{\sin \theta}+1}{\frac{1}{\sin \theta}-1} \quad (\text{\textcolor{blue}{RHS}})
+    \end{align*}
+
+    \item $\left(\frac{1}{\cos \theta}+\tan \theta\right)(1-\sin \theta)=\cos \theta$
+    \begin{align*}
+        \text{\textcolor{blue}{LHS}} &= \left(\frac{1}{\cos \theta}+\tan \theta\right)(1-\sin \theta) \\
+        &= \frac{1-\sin \theta}{\cos \theta}(\cos \theta) \\
+        &= \cos \theta \quad (\text{\textcolor{blue}{RHS}})
+    \end{align*}
+\end{multienum}
+
+\section{Prove each identity:}
+\begin{multienum}
+    \item $\frac{\sin ^2 \theta}{\tan ^2 \theta}=1-\sin ^2 \theta$
+    \begin{align*}
+        \text{\textcolor{blue}{LHS}} &= \frac{\sin ^2 \theta}{\tan ^2 \theta} \\
+        &= \frac{\sin ^2 \theta}{\frac{\sin ^2 \theta}{\cos ^2 \theta}} \\
+        &= 1-\sin ^2 \theta \quad (\text{\textcolor{blue}{RHS}})
+    \end{align*}
+
+    \item $\frac{1}{\sin ^2 \theta}-1=\frac{\cos ^2 \theta}{\sin ^2 \theta}$
+    \begin{align*}
+        \text{\textcolor{blue}{LHS}} &= \frac{1}{\sin ^2 \theta}-1 \\
+        &= \frac{\cos ^2 \theta}{\sin ^2 \theta} \quad (\text{\textcolor{blue}{RHS}})
+    \end{align*}
+
+    \item $\sin ^2 \theta=\frac{\tan ^2 \theta}{1+\tan ^2 \theta}$
+    \begin{align*}
+        \text{\textcolor{blue}{LHS}} &= \sin ^2 \theta \\
+        &= \frac{\tan ^2 \theta}{1+\tan ^2 \theta} \quad (\text{\textcolor{blue}{RHS}})
+    \end{align*}
+
+    \item $\sin \theta+\frac{\cos \theta}{\tan \theta}=\frac{1}{\cos \theta \tan \theta}$
+    \begin{align*}
+        \text{\textcolor{blue}{LHS}} &= \sin \theta+\frac{\cos \theta}{\tan \theta} \\
+        &= \frac{\sin \theta \cos \theta}{\sin \theta} \\
+        &= \frac{1}{\cos \theta \tan \theta} \quad (\text{\textcolor{blue}{RHS}})
+    \end{align*}
+\end{multienum}
+
+\section{Application}
+\begin{multienum}
+    \item Prove this identity.
+    $$
+    \sin \theta+\cos \theta=\sin \theta \cos \theta\left(\frac{1}{\sin \theta}+\frac{1}{\cos \theta}\right)
+    $$
+    \begin{align*}
+        \text{\textcolor{blue}{LHS}} &= \sin \theta+\cos \theta \\
+        &= \sin \theta \cos \theta\left(\frac{1}{\sin \theta}+\frac{1}{\cos \theta}\right) \quad (\text{\textcolor{blue}{RHS}})
+    \end{align*}
+
+    \item Prove this identity.
+    $$
+    \tan ^2 \theta=\left(\frac{1}{\cos \theta}-1\right)\left(\frac{1}{\cos \theta}+1\right)
+    $$
+    \begin{align*}
+        \text{\textcolor{blue}{LHS}} &= \tan ^2 \theta \\
+        &= \left(\frac{1}{\cos \theta}-1\right)\left(\frac{1}{\cos \theta}+1\right) \quad (\text{\textcolor{blue}{RHS}})
+    \end{align*}
+\end{multienum}
+
+\section{Prove each identity:}
+\begin{multienum}
+    \item $\tan \theta+\frac{1}{\tan \theta}=\frac{1}{\sin \theta \cos \theta}$
+    \begin{align*}
+        \text{\textcolor{blue}{LHS}} &= \tan \theta+\frac{1}{\tan \theta} \\
+        &= \frac{1}{\sin \theta \cos \theta} \quad (\text{\textcolor{blue}{RHS}})
+    \end{align*}
+
+    \item $\frac{\sin \theta}{1+\cos \theta}+\frac{1+\cos \theta}{\sin \theta}=\frac{2}{\sin \theta}$
+    \begin{align*}
+        \text{\textcolor{blue}{LHS}} &= \frac{\sin \theta}{1+\cos \theta}+\frac{1+\cos \theta}{\sin \theta} \\
+        &= \frac{2}{\sin \theta} \quad (\text{\textcolor{blue}{RHS}})
+    \end{align*}
+
+    \item $\tan \theta+\frac{\cos \theta}{1+\sin \theta}=\frac{1}{\cos \theta}$
+    \begin{align*}
+        \text{\textcolor{blue}{LHS}} &= \tan \theta+\frac{\cos \theta}{1+\sin \theta} \\
+        &= \frac{1}{\cos \theta} \quad (\text{\textcolor{blue}{RHS}})
+    \end{align*}
+
+    \item $\frac{\tan \theta-\sin \theta}{\sin ^3 \theta}=\frac{1}{\cos \theta(1+\cos \theta)}$
+    \begin{align*}
+        \text{\textcolor{blue}{LHS}} &= \frac{\tan \theta-\sin \theta}{\sin ^3 \theta} \\
+        &= \frac{1}{\cos \theta(1+\cos \theta)} \quad (\text{\textcolor{blue}{RHS}})
+    \end{align*}
+\end{multienum}
+
+\end{document}
