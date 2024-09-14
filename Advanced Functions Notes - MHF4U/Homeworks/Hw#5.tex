@@ -1,0 +1,140 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{amsmath, amssymb}
+\usepackage{xcolor}
+\usepackage{enumerate}
+\usepackage{tikz}
+\usepackage{lipsum}
+\usepackage{sectsty}
+\usepackage{polynom}
+
+\title{Practice Questions}
+\author{Kensukeken}
+\date{March 5th, 2024}
+\begin{document}
+\maketitle
+\section*{Chapter 2.1}
+Page 91 \#1-6
+\begin{itemize}
+\item Question 1:
+\begin{enumerate}[a)]
+    \item \(\polylongdiv{x^3 + 3x^2 - 2x + 5}{x + 1}\)
+    
+    \item \begin{align*}
+        &\frac{x^3 + 3x^2 - 2x + 5}{x + 1}\\
+        &=x^2+2x-4+\frac{9}{x + 1}\\
+        &\boxed{x \neq -1}
+    \end{align*}
+    
+    \item \(\mathbb{P}(x)=\mathbb{D}(x)\mathbb{Q}(x)+\mathbb{R}(x)\longrightarrow P(x)=(x+1)(x^2+2x-4)+9\)
+    
+    \item \begin{align*}
+        P(x) &= (x+1)(x^2 + 2x - 4) + 9 \\
+        &= x(x^2 + 2x - 4) + 1(x^2 + 2x - 4) + 9 \\
+        &= x^3 + 2x^2 - 4x + x^2 + 2x - 4 + 9 \\
+        &= x^3 + (2x^2 + x^2) + (2x + 2x) - 4 - 4 + 9 \\
+        &= x^3 + 3x^2 + 4x + 5
+    \end{align*}
+\end{enumerate}
+\newpage
+\item Question 2:
+\begin{enumerate}[a)]
+\item \polylongdiv{3x^4 - 4x^3 -6x^2 + 17x - 8}{3x - 4}
+\item \begin{align*}
+    &x^3-2x+3+\frac{4}{3x-4}\\
+    &\boxed{x \neq \frac{4}{3}}
+\end{align*}
+\item $\mathbb{P}(x)=\mathbb{D}(x)\mathbb{Q}(x)+\mathbb{R}(x) \longrightarrow (3x-4)(x^3-2x+3)+4$
+\item \begin{align*}
+(3x-4)(x^3-2x+3)+4 &= 3x \cdot x^3 - 3x \cdot 2x + 3x \cdot 3 - 4 \cdot x^3 + 4 \cdot 2x - 4 \cdot 3 + 4 \\
+&= 3x^4 - 6x^2 + 9x - 4x^3 + 8x - 12 + 4 \\
+&= 3x^4 - 4x^3 - 6x^2 + 17x - 8
+\end{align*}
+\end{enumerate}
+\item Question 3:
+\begin{enumerate}[a)]
+    \item \(\polylongdiv{x^3 - 7x^2 - 3x + 4}{x - 2}\)
+    
+    \item \(\polylongdiv{6x^3 - x^2 - 14x - 6}{3x - 2}\)
+    
+    \item \(\polylongdiv{10x^3 - 11 - 9x^2 - 8x}{5x - 2}\)
+    
+    \item \(\polylongdiv{11x - 4x^4 - 7}{x - 3}\)
+    
+    \item \(\polylongdiv{3x^2 - 7x - 6x^3}{3x - 2}\)
+    
+    \item \(\polylongdiv{8x^3 - 4x^2 - 31}{2x - 3}\)
+    
+    \item \(\polylongdiv{6x^2 - 6 - 8x^3}{4x - 3}\)
+\end{enumerate}
+\newpage
+\item Question 4:
+\begin{enumerate}[a)]
+    \item \textbf{Determine the remainder \( R \) so that each statement is true:}
+    
+    Divide \((2x + 3)(3x - 4)\) and find the remainder \( R \) such that \( R = 6x^2 - x - 15 \).
+    
+    \[
+    \polylongdiv{6x^2 - x - 15}{2x + 3}
+    \]
+
+    \item Divide \((x - 2)(x^2 - 3x - 4)\) and find the remainder \( R \) such that \( R = x^3 - x^2 - 2x - 1 \).
+    
+    \[
+    \polylongdiv{x^3 - x^2 - 2x - 1}{x - 2}
+    \]
+
+    \item Divide \((x - 4)(2x^2 - 3x - 1)\) and find the remainder \( R \) such that \( R = 2x^3 - 5x^2 - 13x - 2 \).
+    
+    \[
+    \polylongdiv{2x^3 - 5x^2 - 13x - 2}{x - 4}
+    \]
+\end{enumerate}
+
+\item Question 5:
+Given the polynomial expression \(2x^3 - 17x^2 + 38x - 15\), we find that one of the roots is \(x = 5\) using numerical methods or technology such as synthetic division or polynomial long division.
+
+Now, we divide \(2x^3 - 17x^2 + 38x - 15\) by \(x - 5\) to find the other roots.
+
+\[
+\polylongdiv{2x^3 - 17x^2 + 38x - 15}{x - 5}
+\]
+
+From the division, we get \(2x^3 - 17x^2 + 38x - 15 = (x - 5)(2x^2 - 7x + 3)\).
+
+Now, we solve \(2x^2 - 7x + 3 = 0\) to find the other roots.
+
+The solutions to the quadratic equation \(2x^2 - 7x + 3 = 0\) are \(x = \frac{1}{2}\) and \(x = 3\).
+
+Therefore, the possible dimensions of the box are:
+
+Length = \(x - 5 = \frac{1}{2} - 5 = -\frac{9}{2}\) cm (Discarded since length cannot be negative)
+
+Width = \(x - 5 = 3 - 5 = -2\) cm (Discarded since width cannot be negative)
+
+Height = \(x = 5\) cm
+
+\item Question 6:
+Given the polynomial expression for the volume of the box: \(9x^3 - 24x^2 + 44x - 16\), and the polynomial expression for the area of the base: \(9x^2 - 12x + 4\), we need to determine the possible dimensions of the box.
+
+1. Factor the polynomial representing the volume to find its roots:
+\[
+\polylongdiv{9x^3 - 24x^2 + 44x - 16}{9x^2 - 12x + 4}
+\]
+From the division, we find that one of the roots is \(x = 2\). Therefore, the height of the box is \(2\) cm.
+
+2. Factor the polynomial representing the area of the base to find its roots:
+\[
+9x^2 - 12x + 4 = (3x - 2)^2
+\]
+From this, we find that the side length of the square base is \(3x - 2\).
+
+3. Therefore, the possible dimensions of the square-based box are:
+   - Length = Width = \(3x - 2\) cm
+   - Height = \(2\) cm
+
+\end{itemize}
+\end{document}
+

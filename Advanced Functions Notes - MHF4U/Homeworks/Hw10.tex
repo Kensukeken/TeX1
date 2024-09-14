@@ -1,0 +1,282 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{amsmath, amssymb}
+\usepackage{xcolor}
+\usepackage{tikz}
+\usepackage{lipsum}
+\usepackage{sectsty}
+\usepackage{polynom}
+\usepackage{enumitem}
+
+\title{Practice Questions}
+\author{Kensukeken}
+\date{April 2nd, 2024}
+\begin{document}
+\maketitle
+\section*{Chapter 3.1 \& 3.2}
+\subsection*{Page 153 \#1, 2, 6, 7, 9, 10, 13}
+\begin{itemize}
+\item Question 1
+\begin{enumerate}
+    \item[a)] $f(x)=\frac{1}{x-2}$
+\begin{tabular}{|c|c|}
+    \hline
+    \textbf{As $x \to$} & \textbf{$f(x) \to$} \\
+    \hline
+    $2^+$ & \\
+    \hline
+    $2^-$ & \\
+    \hline
+    $+\infty$ & \\
+    \hline
+    $-\infty$ & \\
+    \hline
+\end{tabular}
+    \item[b)] $f(x)=\frac{1}{x+5}$
+\begin{tabular}{|c|c|}
+    \hline
+    \textbf{As $x \to$} & \textbf{$f(x) \to$} \\
+    \hline
+    $-5^+$ & \\
+    \hline
+    $-5^-$ & \\
+    \hline
+    $+\infty$ & \\
+    \hline
+    $-\infty$ & \\
+    \hline
+\end{tabular}
+    \item[c)] $f(x)=\frac{1}{x+8}$
+\begin{tabular}{|c|c|}
+    \hline
+    \textbf{As $x \to$} & \textbf{$f(x) \to$} \\
+    \hline
+    $8^+$ & \\
+    \hline
+    $8^-$ & \\
+    \hline
+    $+\infty$ & \\
+    \hline
+    $-\infty$ & \\
+    \hline
+\end{tabular}
+\end{enumerate}
+\item Question 2: 
+\begin{enumerate}
+    \item[a)]
+    \begin{enumerate}
+        \item [i)] x=2
+        \item [ii)] x=-3
+    \end{enumerate}
+    \item[b)]
+    \begin{enumerate}
+        \item[i)] $f(x)=\frac{1}{x-2}$ 
+        \item[ii)] $f(x)=\frac{1}{x+3}$ 
+    \end{enumerate}
+\end{enumerate}
+\item Question 6: Sketch each function and then describe the intervals where the slope is increasing and the intervals where it is decreasing 
+\begin{enumerate}
+    \item[a)]$f(x)=\frac{1}{x-3}$
+    \item[b)]$k(x)=\frac{3}{2x+7}$
+    \item[c)]$m(x)=-\frac{2}{x+2}$
+    \item[d)]$p(x)=\frac{5}{3-2x}$ 
+\end{enumerate}
+\item Question 7: Sketch a graph of each function. Label the y-intercepts. State the domain, range, and equations of the asymptotes.
+\begin{enumerate}
+    \item[a)] $f(x)=\frac{1}{x-1}$
+    \item[b)] $g(x)=\frac{1}{x+4}$
+    \item[c)] $h(x)=\frac{1}{2x+!}$ 
+    \item[d)] $k(x)=-\frac{1}{x+4}$
+    \item[e)] $m(x)=-\frac{3}{2x-5}$
+    \item[f)] $n(x)=\frac{4}{5-x}$
+    \item[g)] $p(x)=\frac{1}{x-\frac{1}{4}}$
+    \item[h)] $q(x)=-\frac{3}{x+\frac{1}{2}}$
+\end{enumerate}
+\item Question 9: Determine the equation in the form $f(x)\frac{1}{kx-c}$ for the function with a vertical asymptote at $x=-1$ and y-intercept at $-0.25$. 
+
+\item Question 10: The time required to fly from one location to another is inversely proportional to the average speed to fly from Quebec City to Vancouver is 350 km/h, the flying time is 11 h.
+\begin{enumerate}
+    \item[a)] Write a function to represent the time as a function of the speed.
+    \item[b)] Sketch a graph of this function.
+    \item[c)] How long would the trip from Quebec to Vancouver take at an average speed of 500 km/h?
+    \item[d)] Describe the rate of change of the time as the average speed increases. 
+\end{enumerate}
+\item Question 13: The force required to lift an object is inversely proportional to the distance of the force from the fulcrum of a lever. A force of 200N is required at a point 3 m from the fulcrum to lift a certain object.
+\begin{enumerate}
+    \item[a)] Determine a function to represent the force as a function the distance.
+    \item[b)] Sketch a graph of this function.
+    \item[c)] How much force is required to lift this object at a point m from the direction?
+    \item[d)] What is the effect on the force needed as the distance from the fulcrum is doubled? 
+\end{enumerate}
+\end{itemize}
+\newpage
+
+\begin{itemize}
+    \item \textbf{Question 1}
+    \begin{enumerate}[label=\alph*)]
+        \item $f(x) = \frac{1}{x-2}$
+        \begin{align*}
+            \text{As } x &\to 2^+, \quad f(x) \to +\infty \\
+            \text{As } x &\to 2^-, \quad f(x) \to -\infty \\
+            \text{As } x &\to +\infty, \quad f(x) \to 0 \\
+            \text{As } x &\to -\infty, \quad f(x) \to 0 \\
+        \end{align*}
+        
+        \item $f(x) = \frac{1}{x+5}$
+        \begin{align*}
+            \text{As } x &\to -5^+, \quad f(x) \to +\infty \\
+            \text{As } x &\to -5^-, \quad f(x) \to -\infty \\
+            \text{As } x &\to +\infty, \quad f(x) \to 0 \\
+            \text{As } x &\to -\infty, \quad f(x) \to 0 \\
+        \end{align*}
+        
+        \item $f(x) = \frac{1}{x+8}$
+        \begin{align*}
+            \text{As } x &\to 8^+, \quad f(x) \to +\infty \\
+            \text{As } x &\to 8^-, \quad f(x) \to -\infty \\
+            \text{As } x &\to +\infty, \quad f(x) \to 0 \\
+            \text{As } x &\to -\infty, \quad f(x) \to 0 \\
+        \end{align*}
+    \end{enumerate}
+    
+    \item \textbf{Question 2}
+\begin{enumerate}
+    \item[a)]
+    \begin{enumerate}
+        \item [i)] x=2
+        \item [ii)] x=-3
+    \end{enumerate}
+    \item[b)]
+    \begin{enumerate}
+        \item[i)] $f(x)=\frac{1}{x-2}$ 
+        \item[ii)] $f(x)=\frac{1}{x+3}$ 
+    \end{enumerate}
+\end{enumerate}
+    
+    \item \textbf{Question 6}
+    \begin{enumerate}[label=\alph*)]
+        \item Sketch of $f(x) = \frac{1}{x-3}$:
+            \begin{itemize}
+                \item Vertical asymptote at $x = 3$.
+                \item Slope is increasing on $(-\infty, 3)$ and decreasing on $(3, \infty)$.
+            \end{itemize}
+        
+        \item Sketch of $k(x) = \frac{3}{2x+7}$:
+            \begin{itemize}
+                \item Vertical asymptote at $x = -\frac{7}{2}$.
+                \item Slope is increasing on $(-\infty, -\frac{7}{2})$ and decreasing on $(-\frac{7}{2}, \infty)$.
+            \end{itemize}
+        
+        \item Sketch of $m(x) = -\frac{2}{x+2}$:
+            \begin{itemize}
+                \item Vertical asymptote at $x = -2$.
+                \item Slope is increasing on $(-\infty, -2)$ and decreasing on $(-2, \infty)$.
+            \end{itemize}
+        
+        \item Sketch of $p(x) = \frac{5}{3-2x}$:
+            \begin{itemize}
+                \item Vertical asymptote at $x = \frac{3}{2}$.
+                \item Slope is increasing on $(-\infty, \frac{3}{2})$ and decreasing on $(\frac{3}{2}, \infty)$.
+            \end{itemize}
+    \end{enumerate}
+    
+    \item \textbf{Question 7}
+    \begin{enumerate}[label=\alph*)]
+        \item \textbf{Function:} $f(x) = \frac{1}{x-1}$
+            \begin{itemize}
+                \item \textbf{Domain:} $x \neq 1$
+                \item \textbf{Range:} $y \neq 0$
+                \item \textbf{Vertical asymptote:} $x = 1$
+                \item \textbf{Horizontal asymptote:} $y = 0$
+                \item \textbf{Y-intercept:} $(0, 1)$
+            \end{itemize}
+        
+        \item \textbf{Function:} $g(x) = \frac{1}{x+4}$
+            \begin{itemize}
+                \item \textbf{Domain:} $x \neq -4$
+                \item \textbf{Range:} $y \neq 0$
+                \item \textbf{Vertical asymptote:} $x = -4$
+                \item \textbf{Horizontal asymptote:} $y = 0$
+                \item \textbf{Y-intercept:} $(0, \frac{1}{4})$
+            \end{itemize}
+        
+        \item \textbf{Function:} $h(x) = \frac{1}{2x+1}$
+            \begin{itemize}
+                \item \textbf{Domain:} $x \neq -\frac{1}{2}$
+                \item \textbf{Range:} $y \neq 0$
+                \item \textbf{Vertical asymptote:} $x = -\frac{1}{2}$
+                \item \textbf{Horizontal asymptote:} $y = 0$
+                \item \textbf{Y-intercept:} $(0, 1)$
+            \end{itemize}
+        
+        \item \textbf{Function:} $k(x) = -\frac{1}{x+4}$
+            \begin{itemize}
+                \item \textbf{Domain:} $x \neq -4$
+                \item \textbf{Range:} $y \neq 0$
+                \item \textbf{Vertical asymptote:} $x = -4$
+                \item \textbf{Horizontal asymptote:} $y = 0$
+                \item \textbf{Y-intercept:} $(0, -\frac{1}{4})$
+            \end{itemize}
+        
+        \item \textbf{Function:} $m(x) = -\frac{3}{2x-5}$
+            \begin{itemize}
+                \item \textbf{Domain:} $x \neq \frac{5}{2}$
+                \item \textbf{Range:} $y \neq 0$
+                \item \textbf{Vertical asymptote:} $x = \frac{5}{2}$
+                \item \textbf{Horizontal asymptote:} $y = 0$
+                \item \textbf{Y-intercept:} $(0, -\frac{3}{5})$
+            \end{itemize}
+        
+        \item \textbf{Function:} $n(x) = \frac{4}{5-x}$
+            \begin{itemize}
+                \item \textbf{Domain:} $x \neq 5$
+                \item \textbf{Range:} $y \neq 0$
+                \item \textbf{Vertical asymptote:} $x = 5$
+                \item \textbf{Horizontal asymptote:} $y = 0$
+                \item \textbf{Y-intercept:} $(0, -\frac{4}{5})$
+            \end{itemize}
+        
+        \item \textbf{Function:} $p(x) = \frac{1}{x-\frac{1}{4}}$
+            \begin{itemize}
+                \item \textbf{Domain:} $x \neq \frac{1}{4}$
+                \item \textbf{Range:} $y \neq 0$
+                \item \textbf{Vertical asymptote:} $x = \frac{1}{4}$
+                \item \textbf{Horizontal asymptote:} $y = 0$
+                \item \textbf{Y-intercept:} $(0, 4)$
+            \end{itemize}
+        
+        \item \textbf{Function:} $q(x) = -\frac{3}{x+\frac{1}{2}}$
+            \begin{itemize}
+                \item \textbf{Domain:} $x \neq -\frac{1}{2}$
+                \item \textbf{Range:} $y \neq 0$
+                \item \textbf{Vertical asymptote:} $x = -\frac{1}{2}$
+                \item \textbf{Horizontal asymptote:} $y = 0$
+                \item \textbf{Y-intercept:} $(0, -6)$
+            \end{itemize}
+    \end{enumerate}
+    
+    \item \textbf{Question 9:}
+    \begin{itemize}
+        \item Given a vertical asymptote at $x = -1$ and y-intercept at $(-0.25, 0)$.
+        \item Equation in the form $f(x) = \frac{1}{kx-c}$: $f(x) = \frac{1}{-x + \frac{3}{4}}$
+    \end{itemize}
+    
+    \item \textbf{Question 10:}
+    \begin{enumerate}[label=\alph*)]
+        \item Write a function to represent the time as a function of speed: $T(v) = \frac{d}{v}$, where $d$ is the distance.
+        \item[b)] Graph sketching: It will be a hyperbola with positive slope.
+        \item[c)] $T(500) = \frac{d}{500} = 7$ hours.
+        \item[d)] Rate of change of time as speed increases is negative. The time taken decreases as speed increases.
+    \end{enumerate}
+    
+    \item \textbf{Question 13:}
+    \begin{enumerate}[label=\alph*)]
+        \item Given that force is inversely proportional to distance: $F(d) = \frac{k}{d}$, where $k$ is a constant.
+        \item[b)] Graph sketching: It will be a rectangular hyperbola.
+        \item[c)] $F(3) = \frac{k}{3} = 200 \Rightarrow k = 600$. So, $F(d) = \frac{600}{d}$.
+        \item[d)] If the distance is doubled, force needed is halved. $F(2d) = \frac{600}{2d} = 300$N.
+    \end{enumerate}
+\end{itemize}
+\end{document}
