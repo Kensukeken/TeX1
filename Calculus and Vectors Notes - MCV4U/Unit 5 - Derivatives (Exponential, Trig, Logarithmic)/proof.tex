@@ -1,0 +1,133 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{tikz}
+
+\begin{document}
+
+\textit{Proof} that $\frac{\delta (\sin \theta)}{\delta x} = \cos \theta$.
+
+We will divide this proof into two parts.
+
+\textbf{Part 1: Proving $\lim_{\theta \to 0}\left( \frac{\sin \theta }{\theta}\right)$}
+
+We begin by proving this because it plays a crucial role in the main proof, which we will address in part 2.
+
+Recall that the area of a circle is $\pi r^2 = \left(\frac{2 \pi}{2}\right)r^2$. We consider our angle $\theta$ in radians. The area of the sector of a circle created by a central angle of $\theta$ radians represents $\frac{\theta}{2\pi}$ of the area of the entire circle.
+
+\begin{minipage}{0.5\textwidth}
+For example, if the angle shown is $60^{\circ}$, or $\frac{\pi}{3}$ radians, then the area of the highlighted sector will represent $\left(\frac{\frac{\pi}{3}}{2\pi}\right)=\frac{\pi}{3}\times \frac{1}{2\pi}=\frac{\pi}{6\pi}=\frac{1}{6}$ of the area of the circle as a whole.
+\end{minipage}
+\hspace{1em}
+\begin{minipage}{0.5\textwidth}
+\begin{tikzpicture}[scale=2.5] 
+\draw (0,0) circle (1cm);
+\draw (0,0) -- (0:1cm); 
+\draw (0,0) -- (60:1cm); 
+
+\draw (0.2,0) arc (0:60:0.2cm); 
+\node at (0.3,0.1) {$\theta$};
+\end{tikzpicture}
+\end{minipage}
+
+\hspace{1em}
+
+Therefore, for a circle with radius $r$, the area of a sector created by a central angle of $\theta$ radians is given by the formula:
+
+\begin{align*}
+    \text{Area of Sector} &= \left(\frac{\theta}{2 \pi}\right)(\text{area of circle})\\
+    &=\left(\frac{\theta}{2 \pi}\right)(\pi r^2)\\
+    &=\left(\frac{\theta}{2}\right)r^2
+\end{align*}
+
+Now, focusing on Sector OAB, the length of OB is the radius of the circle from which Sector OAB originates. B and C share the same x-coordinate, as C lies on a vertical line from B. Since C is outside the unit circle, its x-coordinate must be $\cos \theta$. Thus, the radius of the circle from which Sector OAB originates is $\cos \theta$.
+
+As previously stated, the area of a sector is $\left(\frac{\theta}{2}\right)r^2$, and since $r=\cos \theta$, the area of Sector OAB is $\left(\frac{\theta}{2}\right)\cos^2\theta$.
+
+Now, let’s consider Triangle OCB. Its area is $\frac{1}{2}bh$. The base of the triangle is $\cos \theta$, and the height is the y-coordinate of C, which is $\sin \theta$. Thus, the area of Triangle OCB is $\frac{1}{2}\cos \theta \sin \theta$.
+
+Moving to Sector OCD, the area of a sector is $\left(\frac{\theta}{2}\right)r^2$. Since the radius of this sector is 1 (from a unit circle), the area of Sector OCD is $\left(\frac{\theta}{2}\right)(1)^2 = \frac{\theta}{2}$.
+
+Therefore, we have:
+
+\begin{align*}
+    &\text{Area of Sector OAB} = \left(\frac{\theta}{2} \right)\cos^2\theta\\
+    &\text{Area of Triangle OCB} = \frac{1}{2}\cos \theta \sin \theta \\
+    &\text{Area of Sector OCD} = \frac{\theta}{2}
+\end{align*}
+
+Combining the above expressions, we get:
+
+\begin{equation*}
+    \left(\frac{\theta}{2} \right)\cos ^2 \theta \leq \frac{1}{2}\cos \theta \sin \theta \leq \frac{\theta}{2}
+\end{equation*}
+
+Multiplying all sides by $\frac{2}{\theta \cos \theta}$ gives:
+
+$$\cos \theta \leq \frac{\sin \theta}{\theta} \leq \frac{1}{\cos \theta}$$
+
+Taking the limit as $\theta \to 0$ of the left, middle, and right expressions:
+
+$$\lim_{\theta \to 0}\cos \theta \leq \lim_{\theta \to 0}\frac{\sin \theta}{\theta} \leq \lim_{\theta \to 0}\frac{1}{\cos \theta}$$
+
+The left and right limits can be evaluated by substituting $\theta=0$ since those functions are continuous around $\theta=0$:
+
+\begin{align*}
+   & \cos 0 \leq \lim_{\theta \to 0} \frac{\sin \theta}{\theta} \leq \frac{1}{\cos 0}\\
+   & 1 \leq \lim_{\theta \to 0} \frac{\sin \theta}{\theta} \leq \frac{1}{1}\\
+   & 1 \leq \lim_{\theta \to 0} \frac{\sin \theta}{\theta} \leq 1
+\end{align*}
+
+The fact that $1$ is both less than or equal to a certain quantity, and that the same quantity is less than or equal to $1$, implies that the quantity is $1$. Therefore:
+
+$$\lim_{\theta \to 0}\frac{\sin \theta}{\theta}=1$$
+
+\textbf{Part 2: Utilizing the Result}
+
+We required this result because $\frac{\delta(\sin \theta)}{\delta \theta}=\cos \theta$ is a crucial moment in our proof.
+
+\begin{align*}
+    \frac{\delta (\sin \theta)}{\delta \theta} &= \lim_{h \to 0}\frac{\sin(\theta+h)-\sin \theta}{h} \text{(next, use compound angle formula)}\\
+    &=\lim_{h\to 0}\frac{\sin \theta \cos h+\cos \theta \sin h-\sin \theta}{h} \text{(next, rearrange the numerator)}\\
+    &= \lim_{h\to 0}\frac{\sin \theta \cos h-\sin \theta +\cos \theta \sin h}{h} \text{(next, split into two fractions)}\\ 
+    &=\lim_{h \to 0} \frac{\sin \theta \cos h-\sin \theta }{h}+\frac{\cos \theta \sin \theta \sin h}{h} \text{(next, factor each numerator)}\\
+    &=\lim_{h \to 0} \frac{\sin \theta \cos h-1}{h}+\cos \theta \left(\frac{\sin h}{h}\right)\\
+    &=\lim_{h \to 0} \sin \theta \left[\frac{\cos h-1}{h}\right]+ \cos \theta \left(\frac{\sin h}{h}\right)\\    
+    &\text{Evaluate the sum of the limits rather than the limit of the sum}\\
+    &=\lim_{h \to 0} \sin \theta \left[\frac{\cos h-1}{h}\right]+ \lim_{h \to 0}\cos \theta \left(\frac{\sin h}{h}\right)\\    
+\end{align*}
+
+Since $\sin \theta$ and $\cos \theta$ are independent of $h$, we can pull them out:
+
+$$
+\begin{aligned}
+& =\sin \theta \lim _{h \rightarrow 0} \frac{\cos (h)-1}{h}+\cos \theta \lim _{h \rightarrow 0} \frac{\sin (h)}{h} \\
+& =\sin \theta \lim _{h \rightarrow 0}\left(\frac{\cos (h)-1}{h}\right)\left(\frac{\cos (h)+1}{\cos (h)+1}\right)+\cos \theta \\
+& =\sin \theta \lim _{h \rightarrow 0}\left[\frac{\cos ^2 h-1}{h[\cos (h)+1]}\right]+\cos \theta \\
+& =\sin \theta \lim _{h \rightarrow 0} \frac{-\sin ^2 h}{h[\cos (h)+1]}+\cos \theta
+\end{aligned}
+$$
+
+Next, we break apart the fraction under limit:
+
+$$
+\begin{aligned}
+& =\sin \theta\left[\lim _{h \rightarrow 0}\left(\frac{-\sin (h)}{h} \times \frac{\sin (h)}{\cos (h)+1}\right)\right]+\cos \theta \\
+& =\sin \theta\left[\lim _{h \rightarrow 0} \frac{-\sin h}{h} \times \lim _{h \rightarrow 0} \frac{\sin (h)}{\cos (h)+1}\right]+\cos \theta \\
+& =\sin \theta\left[-\lim _{h \rightarrow 0} \frac{\sin (h)}{h} \times \lim _{h \rightarrow 0} \frac{\sin (h)}{\cos (h)+1}\right]+\cos \theta \\
+& =\sin \theta\left[-(1) \times \frac{\sin 0}{\cos 0+1}\right]+\cos \theta \\
+& =\sin \theta\left[-1 \times \frac{0}{1+1}\right]+\cos \theta \\
+& =\sin \theta[-1 \times 0]+\cos \theta
+\end{aligned}
+$$
+
+Considering the product of limits instead of the limit of the product:
+
+\begin{align*}
+    &=\sin[-1\times 0]+\cos\theta\\
+    &=(\sin\theta)(0)+\cos \theta\\
+    &=\cos \theta
+\end{align*}
+
+Therefore, $\frac{\delta (\sin \theta)}{\delta \theta}=\cos \theta$.
+
+\end{document}
