@@ -1,0 +1,132 @@
+Unit 1 - Polynomial Functions 
+Unit 2 - Polynomial Equations and inequalities 
+Unit 3 - Rational Functions and Equations 
+Unit 4 - Radian Measure
+Unit 5 - Trig Functions and Equations 
+Unit 6 - Log and Exponent Functions and Equations 
+Unit 7 - FSE and Exam.
+
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{amsmath, amssymb}
+\usepackage{xcolor}
+\usepackage{tikz}
+\usepackage{lipsum}
+
+% Define colors
+\definecolor{lessoncolor}{RGB}{74, 144, 226}
+\definecolor{examplecolor}{RGB}{92, 184, 92}
+\definecolor{notecolor}{RGB}{255, 179, 102}
+
+% Define a command for colorful sections
+\newcommand{\colorsection}[1]{\section*{\textcolor{lessoncolor}{#1}}}
+
+% Set up TikZ for graphing
+\usetikzlibrary{positioning, arrows.meta, shapes.geometric}
+
+% Document
+\begin{document}
+
+\begin{titlepage}
+    \centering
+    \vspace*{2cm}
+    {\LARGE \textcolor{lessoncolor}{Mathematics Lessons}}\par
+    \vspace{1cm}
+    {\large Your Name}\par
+    \vspace{2cm}
+    {\large February 20th, 2024}\par
+    \vspace{3cm}
+\end{titlepage}
+
+\colorsection{Lesson 1: Power Functions}
+
+\textbf{Definition:} A power function is of the form \( f(x) = ax^n \), where \( a \) and \( n \) are constants.
+
+\textbf{Example:} \( f(x) = 2x^3 \) is a power function.
+
+\textbf{Note:} Power functions often exhibit different behaviors based on the sign of \( a \) and the value of \( n \).
+
+\textbf{Exercises:}
+\begin{enumerate}
+    \item Find the power function for a cubic curve passing through the point \((1, 2)\).
+    \item Investigate the behavior of power functions with negative exponents.
+\end{enumerate}
+
+\colorsection{Lesson 2: Polynomial Functions}
+
+\textbf{Definition:} A polynomial function is of the form \( P(x) = a_nx^n + a_{n-1}x^{n-1} + \ldots + a_1x + a_0 \), where \( a_i \) are coefficients.
+
+\textbf{Example:} \( P(x) = 3x^4 - 2x^2 + 5 \) is a polynomial function.
+
+\textbf{Note:} The degree of a polynomial is the highest power of the variable with a non-zero coefficient.
+
+\textbf{Exercises:}
+\begin{enumerate}
+    \item Determine the degree and leading term of the polynomial \( Q(x) = 4x^3 + 2x^2 - 7x + 1 \).
+    \item Express the polynomial \( R(x) = x^4 + 3x^2 - 2 \) in standard form.
+\end{enumerate}
+
+\colorsection{Lesson 3: Factored Form Polynomial Functions}
+
+\textbf{Definition:} Factored form represents a polynomial as a product of linear factors.
+
+\textbf{Example:} \( P(x) = (x - 2)(x + 1)(x - 3) \) is the factored form of a polynomial.
+
+\textbf{Note:} Factoring helps identify roots and facilitates analysis of the function.
+
+\textbf{Exercises:}
+\begin{enumerate}
+    \item Factorize the quadratic polynomial \( S(x) = x^2 - 5x + 6 \).
+    \item Find the factored form of the cubic polynomial \( T(x) = x^3 + 8 \).
+\end{enumerate}
+
+\colorsection{Lesson 4: Transformations of Polynomial Functions}
+
+\textbf{Definition:} Transformations modify the graph of a function.
+
+\textbf{Example:} \( g(x) = f(x - 2) \) shifts the graph of \( f(x) \) two units to the right.
+
+\textbf{Note:} Transformations include shifts, stretches, and reflections.
+
+\textbf{Exercises:}
+\begin{enumerate}
+    \item Explore the effect of the transformation \( h(x) = f(x + 1) \) on the graph of a polynomial.
+    \item Investigate how the graph changes with \( k(x) = -f(x) \).
+\end{enumerate}
+
+\colorsection{Lesson 5: Symmetry in Polynomial Functions}
+
+\textbf{Definition:} A function is even if \( f(x) = f(-x) \) for all \( x \) in the domain.
+
+\textbf{Example:} \( h(x) = x^2 \) is an even function.
+
+\textbf{Note:} Odd functions satisfy \( f(x) = -f(-x) \).
+
+\textbf{Exercises:}
+\begin{enumerate}
+    \item Determine whether the function \( U(x) = x^4 - x^2 \) is even, odd, or neither.
+    \item Investigate the symmetry properties of the function \( V(x) = 3x^3 + 2x \).
+\end{enumerate}
+
+\colorsection{Graphs and Visuals}
+
+\begin{center}
+\begin{tikzpicture}[>=Stealth, scale=0.8]
+    % Example graph of a polynomial function
+    \draw[->] (-3,0) -- (3,0) node[right] {\(x\)};
+    \draw[->] (0,-2) -- (0,4) node[above] {\(f(x)\)};
+    \draw[domain=-2.2:2.2, smooth, variable=\x, lessoncolor, thick] plot ({\x},{\x^3 - 2*\x + 1});
+    \node[anchor=north east, lessoncolor] at (0,0) {$(0,0)$};
+\end{tikzpicture}
+\end{center}
+
+\colorsection{Conclusion}
+
+These lessons provide a foundation for understanding power functions, polynomial functions, factored form, transformations, and symmetry in polynomial functions. Visualizing graphs can enhance comprehension and aid in problem-solving.
+
+
+\newpage
+\href{Unit 1}{{https://www.jensenmath.ca/math12af-unit-1}
+\end{document}

@@ -1,0 +1,467 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath, amssymb}
+\usepackage{xcolor}
+\usepackage{graphicx}
+\usepackage{lipsum}
+\usepackage{polynom}
+\usepackage{enumitem}
+\usepackage{framed}
+\usepackage{hyperref}
+\usepackage[most]{tcolorbox}
+\usepackage{pgfplots}
+
+% Define colors
+\definecolor{examplecolor}{RGB}{92, 184, 92}
+\definecolor{lessoncolor}{RGB}{74, 144, 226}
+\definecolor{notecolor}{RGB}{255, 179, 102}
+% Define colors
+\definecolor{solutioncolor}{RGB}{74, 144, 226}
+
+% Define new environment for solutions
+\newenvironment{solution}{\color{solutioncolor}}{}
+% for small text
+\newcommand{\smalltext}[1]{\text{\footnotesize #1}}
+
+\title{Advanced Functions Exam - Part A}
+\author{Kensukeken}
+\date{May 21st, 2024}
+
+\begin{document}
+\maketitle
+
+\subsection*{Part A: Short Answer}
+1. List the asymptotes of the following:
+\begin{enumerate}
+    \item[a)] \( y = \frac{2 + 3x}{6 - x} \)
+    \begin{solution}
+        \begin{align*}
+        \text{V.A: } & \; x-6 =0, x = 6 \smalltext{ (Denominator equals zero)} \\
+        \text{H.A: } & \; y = \frac{2}{-6} = -3 \smalltext{ (Degree of numerator equals degree of denominator, ratio of leading coefficients)}
+    \end{align*}
+\end{solution}
+    \item[b)] \( y = \frac{2 + 3x}{x^2 + 5x - 14} \)
+    \begin{solution}
+        \begin{align*}
+        &y = \frac{2 + 3x}{(x + 7)(x - 2)} \smalltext{ (Factor out the denominator)} \\
+        \text{V.A: } & \; x = x + 7=0, x= -7, x-2=0, x= 2 \smalltext{ (Denominator equals zero)} \\
+        \text{H.A: } & \; y = 0 \smalltext{ (Degree of denominator is greater than numerator)}
+    \end{align*}
+\end{solution}
+    \item[c)] \( y = \frac{x^2 - 5x}{x - 1} \)
+        \begin{solution}
+    \begin{align*}
+        &y = \frac{x(x - 5)}{x - 1} \smalltext{ (Factor out numerator)} \\
+        \text{V.A: } & \; x -1 = 0, x=1 \smalltext{ (Denominator equals zero)} \\
+        \end{align*}
+        $$\polylongdiv{x^2-5x}{x-1}$$
+    
+        \begin{align*}
+        \text{O.A: } & \; y = x-4 \smalltext{ (Long division since numerator degree is higher)}
+    \end{align*}
+    \end{solution}
+\end{enumerate}
+
+2. Solve: \( 5 = \frac{2 + 3x}{6 - x} \)
+\begin{solution}
+\begin{align*}
+    5(6 - x) &= 2 + 3x & \text{Expand using distributive property} \\
+    30 - 5x &= 2 + 3x & \text{Perform multiplication} \\
+    30 - 2 &= 5x + 3x & \text{Combine like terms} \\
+    28 &= 5x + 3x & \text{Subtract 2 from both sides} \\
+    28 &= 8x & \text{Combine like terms} \\
+    x &= \frac{28}{8} & \text{Divide both sides by 8} \\
+    x &= \frac{7}{2} & \text{Simplify the fraction} \\
+\end{align*} 
+    \end{solution}
+
+3. Describe the function \( y=\frac{x^3-5x}{6x^7-4x^3} \) as even, odd or neither.
+    \begin{solution}
+    \begin{align*}
+    y(-x) &= \frac{(-x)^3-5(-x)}{6(-x)^7-4(-x)^3} \\
+          &= \frac{-x^3+5x}{-6x^7+4x^3} \\
+          &= -\frac{x^3-5x}{6x^7-4x^3} \\
+          &= -y(x) \\
+    \text{Therefore, the function is odd.}
+\end{align*}
+    \end{solution}
+
+4. An odd function has 3 vertical asymptotes, one is \( x=3 \). What are the other two?
+\begin{solution}
+    \begin{align*}
+    \text{For an odd function, the asymptotes should be symmetric about the origin.} \\
+    \text{Thus, if \( x=3 \) is a vertical asymptote, then the other two are \( x=-3 \) and \( x=0 \).}
+\end{align*}
+\end{solution}
+
+5. True or False? An even non-constant function that is continuous at \( x = 0 \) has a local max or min there.
+\begin{solution}
+    \begin{align*}
+    &\text{True.} \smalltext{ By symmetry, an even function continuous at } x = 0 \smalltext{ has a local extremum at } x = 0.
+\end{align*}
+\end{solution}
+
+6. True or False? A reciprocal function has no roots.
+\begin{solution}
+    \begin{align*}
+    &\text{True.} \smalltext{ A reciprocal function of the form } y = \frac{1}{f(x)} \smalltext{ is undefined where } f(x) = 0.
+\end{align*}
+\end{solution}
+\newpage 
+7. Convert to radians
+\begin{enumerate}
+    \item[a)] \( 225^{\circ} \) exact
+    \begin{solution}
+    \begin{align*}
+        225^{\circ} &= 225 \times \frac{\pi}{180} \\
+        &= \frac{225\pi}{180} \\
+        &= \frac{5\pi}{4}
+    \end{align*}
+    \end{solution}
+    \item[b)] \( 164^{\circ} \) to 3 decimal places
+    \begin{solution}
+    \begin{align*}
+        164^{\circ} &= 164 \times \frac{\pi}{180} \\
+        &= \frac{164\pi}{180} \\
+        &= \frac{41\pi}{45} \approx 2.862
+    \end{align*}
+    \end{solution}
+\end{enumerate}
+
+8. Convert to degrees
+\begin{enumerate}
+    \item[a)] \( \frac{7\pi}{12} \)
+    \begin{solution}
+    \begin{align*}
+        \frac{7\pi}{12} &= \frac{7\pi}{12} \times \frac{180}{\pi} \\
+        &= \frac{7 \times 180}{12} \\
+        &= 105^{\circ}
+    \end{align*}
+        \end{solution}
+
+    \item[b)] \( 2.34 \) (to 1 decimal place)
+    \begin{solution}
+    \begin{align*}
+        2.34 &= 2.34 \times \frac{180}{\pi} \\
+        &= \frac{2.34 \times 180}{\pi} \\
+        &\approx 134.1^{\circ}
+    \end{align*}
+    \end{solution}
+
+\end{enumerate}
+
+9. Determine the angle \( x \in [0, 360^{\circ}] \) and \( \theta \in [0, 2\pi] \)
+\begin{enumerate}
+    \item[a)] \( \sin x = -0.5 \)
+    \begin{solution}
+    \begin{align*}
+        x &= 210^{\circ}, 330^{\circ} \\
+        \theta &= \frac{7\pi}{6}, \frac{11\pi}{6}
+    \end{align*}
+    \end{solution}
+
+    \item[b)] \( \cot x = -\sqrt{3} \)
+    \begin{solution}
+    \begin{align*}
+        \cot x &= \frac{\cos x}{\sin x} = -\sqrt{3} \\
+        x &= 120^{\circ}, 300^{\circ} \\
+        \theta &= \frac{2\pi}{3}, \frac{5\pi}{3}
+    \end{align*}
+    \end{solution}
+    \item[c)] \( \sec x = 2.5 \) (to 1 decimal place)
+    \begin{solution}
+    \begin{align*}
+        \sec x &= \frac{1}{\cos x} = 2.5 \implies \cos x = 0.4 \\
+        x &\approx 66.4^{\circ}, 293.6^{\circ} \\
+        \theta &\approx 1.16, 5.12
+    \end{align*}
+    \end{solution}
+    \item[d)] \( \cos \theta = \frac{1}{\sqrt{2}} \)
+    \begin{solution}
+    \begin{align*}
+        \theta &= \frac{\pi}{4}, \frac{7\pi}{4}
+    \end{align*}
+    \end{solution}
+
+    \item[e)] \( \csc \theta = 2 \)
+    \begin{solution}
+        \begin{align*}
+        \csc \theta &= \frac{1}{\sin \theta} \implies \sin \theta = \frac{1}{2} \\
+        \theta &= \frac{\pi}{6}, \frac{5\pi}{6}
+    \end{align*}
+    \end{solution}
+    \item[f)] \( \cot \theta = 2.5 \) (to 1 decimal place)
+\begin{solution}
+    \begin{align*}
+        \cot \theta &= \frac{1}{\tan \theta} \implies \tan \theta = \frac{1}{2.5} = 0.4 \\
+        \theta &\approx 0.38, 3.52
+    \end{align*}
+    \end{solution}
+
+\end{enumerate}
+
+10. Solve for the angle \( x \in [0, 360^{\circ}] \) and \( \theta \in [0, 2\pi] \)
+\begin{enumerate}
+    \item[a)] \( \csc^2 x = 2 \)
+    \begin{solution}
+        \begin{align*}
+            \csc^2 x &= 2 \implies \sin^2 x = \frac{1}{2} \implies \sin x = \pm \frac{1}{\sqrt{2}} \\
+            x &= 45^{\circ}, 135^{\circ}, 225^{\circ}, 315^{\circ} \\
+            \theta &= \frac{\pi}{4}, \frac{3\pi}{4}, \frac{5\pi}{4}, \frac{7\pi}{4}
+        \end{align*}
+    \end{solution}
+    \item[b)] \( 3\sec^2 \theta - 4 = 0 \)
+    \begin{solution}
+        \begin{align*}
+            3\sec^2 \theta &= 4 \implies \sec^2 \theta = \frac{4}{3} \implies \cos^2 \theta = \frac{3}{4} \\
+            \cos \theta &= \pm \frac{\sqrt{3}}{2} \\
+            \theta &= \frac{\pi}{6}, \frac{5\pi}{6}, \frac{7\pi}{6}, \frac{11\pi}{6}
+        \end{align*}
+    \end{solution}
+    \item[c)] \( \sin 2x = 0.5 \)
+    \begin{solution}
+        \begin{align*}
+            2x &= 30^{\circ}, 150^{\circ}, 390^{\circ}, 510^{\circ} \\
+            x &= 15^{\circ}, 75^{\circ}, 195^{\circ}, 255^{\circ} \\
+            2x &= \frac{\pi}{6}, \frac{5\pi}{6}, \frac{13\pi}{6}, \frac{17\pi}{6} \\
+            x &= \frac{\pi}{12}, \frac{5\pi}{12}, \frac{13\pi}{12}, \frac{17\pi}{12}
+        \end{align*}
+    \end{solution}
+\end{enumerate}
+
+11. Express as a simple trig function of the angle \( x \).
+\begin{enumerate}
+    \item[a)] \( \sin \left(\frac{\pi}{2} + x\right) \)
+    \begin{solution}
+        \begin{align*}
+            &= \cos x \smalltext{ (Using co-function identity)}
+        \end{align*}
+    \end{solution}
+    \item[b)] \( \sec(-x) \)
+    \begin{solution}
+        \begin{align*}
+            &= \sec x \smalltext{ (Even function property of secant)}
+        \end{align*}
+    \end{solution}
+    \item[c)] \( \tan \left(x - \frac{3\pi}{2}\right) \)
+    \begin{solution}
+        \begin{align*}
+            &= \cot x \smalltext{ (Using period property of tangent)}
+        \end{align*}
+    \end{solution}
+\end{enumerate}
+
+12. Give the period, amplitude, phase shift and axis of \( y = 5\sin(3x - \pi) - 7 \)
+\begin{solution}
+\begin{align*}
+    &\text{Period: } \frac{2\pi}{3} \smalltext{ (Coefficient of } x \smalltext{)} \\
+    &\text{Amplitude: } 5 \smalltext{ (Coefficient of sine)} \\
+    &\text{Phase shift: } \frac{\pi}{3} \smalltext{ (Solving } 3x - \pi = 0 \smalltext{)} \\
+    &\text{Axis: } y = -7 \smalltext{ (Vertical shift down 7 units)}
+\end{align*}
+\end{solution}
+
+\newpage
+13. Simplify
+\begin{enumerate}
+    \item[a)] \( \sin 13 \cos 25 + \sin 25 \cos 13 \)
+    \begin{solution}
+    \begin{align*}
+        &= \sin(13 + 25) \smalltext{ (Using sum-to-product identities)} \\
+        &= \sin 38
+    \end{align*}
+    \end{solution}
+
+    \item[b)] \( 2\sin 50 \cos 50 \)
+    \begin{solution}
+    \begin{align*}
+        &= \sin 100 \smalltext{ (Using double angle identity for sine)}
+    \end{align*}
+    \end{solution}
+
+    \item[c)] \( \cos^2 x - 1 \)
+    \begin{solution}
+    \begin{align*}
+        &= -\sin^2 x \smalltext{ (Using Pythagorean identity)}
+    \end{align*}
+    \end{solution}
+
+    \item[d)] \( \cos(\alpha + 2b) \cos(\alpha + b) \sin(\alpha + b) \)
+\begin{solution}
+    \begin{align*}
+&= \frac{1}{2}[\cos((\alpha + 2b) - (\alpha + b)) + \cos((\alpha + 2b) + (\alpha + b))] \sin(\alpha + b) & \text{(Product-to-sum identity)} \\
+&= \frac{1}{2}[\cos(b) + \cos(2\alpha + 3b)] \sin(\alpha + b) & \text{(Simplify the cosine arguments)} \\
+&= \frac{1}{2}\cos(b)\sin(\alpha + b) + \frac{1}{2}\cos(2\alpha + 3b)\sin(\alpha + b) & \text{(Distribute the sine term)}
+\end{align*}
+
+    \end{solution}
+\end{enumerate}
+
+14. Give an exact value for \( \csc 15^{\circ} \)
+\begin{solution}
+\begin{align*}
+    \csc 15^{\circ} &= \frac{1}{\sin 15^{\circ}} && \text{Definition of cosecant.} \\
+    &= \frac{1}{\sin(45^{\circ} - 30^{\circ})} && \text{Expressing \(15^{\circ}\) as \(45^{\circ} - 30^{\circ}\).} \\
+    &= \frac{1}{\sin 45^{\circ} \cos 30^{\circ} - \cos 45^{\circ} \sin 30^{\circ}} && \text{Applying the subtraction formula for sine.} \\
+    &= \frac{1}{\frac{\sqrt{2}}{2} \cdot \frac{\sqrt{3}}{2} - \frac{\sqrt{2}}{2} \cdot \frac{1}{2}} && \text{Substituting values for sine and cosine.} \\
+    &= \frac{1}{\frac{\sqrt{6} - \sqrt{2}}{4}} && \text{Simplifying the expression in the denominator.} \\
+    &= \frac{4}{\sqrt{6} - \sqrt{2}} \cdot \frac{\sqrt{6} + \sqrt{2}}{\sqrt{6} + \sqrt{2}} && \text{Rationalizing the denominator.} \\
+    &= \frac{4(\sqrt{6} + \sqrt{2})}{6 - 2} && \text{Simplifying after multiplication.} \\
+    &= \sqrt{6} + \sqrt{2} && \text{Final simplification.}
+\end{align*}
+\end{solution}
+\newpage
+15. The population of trout in a river is given by \( N(t) = 1000 + \frac{1000t^2}{t^2 + 100} \), \( t \geq 0 \).
+\begin{enumerate}
+    \item[a)] What size will the trout population be after a long time?
+    \begin{solution}
+
+\begin{align*}
+& \text{ Initial Expression} \\
+& \lim_{t \rightarrow \infty} N(t) = 1000 + \frac{1000}{1 + \lim_{t \rightarrow \infty} \left[\frac{100}{t^2}\right]} \quad \text{(Evaluate the Inner Limit)}  \\
+& \text{As } t \text{ approaches infinity, the term } \frac{100}{t^2} \text{ approaches 0.} \\
+& \lim_{t \rightarrow \infty} \left[\frac{100}{t^2}\right] = 0 \\
+& \text{Substitute the Inner Limit Result} \\
+& \text{Substitute 0 for } \lim_{t \rightarrow \infty} \left[\frac{100}{t^2}\right] \text{ in the initial expression.} \\
+& \lim_{t \rightarrow \infty} N(t) = 1000 + \frac{1000}{1 + 0} = 1000 + 1000 \\
+& \text{ Final Result:} \\
+& \text{The limit of } N(t) \text{ as } t \text{ approaches infinity is 2000 Trout.} \\
+& \lim_{t \rightarrow \infty} N(t) = 2000 \text{ Trout}
+\end{align*}
+
+
+
+    \end{solution}
+
+    \item[b)] How many trout were in the river to begin with?
+\begin{solution}
+    \begin{align*}
+        N(0) &= 1000 + \frac{1000 \cdot 0^2}{0^2 + 100} \\
+             &= 1000 + 0 \\
+             &= 1000\\\\
+        &\text{Therefore, the trout were in the river to begin with 1000  }     
+    \end{align*}
+\end{solution}
+    \item[c)] How fast is the trout population growing at three years?
+    \begin{solution}
+    \begin{align*}
+       N(3)=1000+\frac{1000 \cdot 3}{3^2+100}=1000+\frac{9000}{109} \approx 1082.569
+    \end{align*}
+\end{solution}
+
+    \item[d)] What is the average population growth for the first three years?
+   \begin{solution}
+    \begin{align*}
+        \text{Average growth rate} &= \frac{N(3) - N(0)}{3 - 0} \\
+        N(3) &= 1000 + \frac{1000 \cdot 3^2}{3^2 + 100} \\
+             &= 1000 + \frac{9000}{109} \\
+             &= 1000 + 82.57 \\
+             &= 1082.57 \\
+        \text{Average growth rate} &= \frac{1082.57 - 1000}{3} \\
+                                   &= \frac{82.57}{3} \\
+                                   &\approx 27.52 \smalltext{ trout per year}
+    \end{align*}
+\end{solution} 
+
+\end{enumerate}
+
+16. The probability, P of hitting a target x feet away is graphed below.
+\begin{enumerate}
+    \item[a)] What is the rate of change of P as player moves 10 ft to 90 ft away?
+    \item[b)] How fast is the probability changing when the participant is 50 ft away?
+\end{enumerate}
+\begin{center}
+\begin{tikzpicture}[scale=0.05]
+    % Draw axes
+    \draw[->] (-25,0) -- (125,0) node[right] {$x$};
+    \draw[->] (0,-10) -- (0,110) node[above] {$P(x)$};
+    
+    % Draw ticks on x-axis
+    \foreach \x in {-20, -10,  10, 20, 40, 60, 80, 100, 120}
+        \draw (\x,2) -- (\x,-2) node[below] {\tiny \x};
+        
+    % Draw ticks on y-axis
+    \foreach \y in {20, 40,50,60,70,80,90,100}
+        \draw (2,\y) -- (-2,\y) node[left] {\tiny \y};
+    
+    % Plot points
+    \foreach \Point in {(-20,55), (-10,70), (0,100), (10,95), (20,80), (40,35), (60,25), (100,15), (120,10)}
+        \node at \Point {\textbullet};
+            \draw[dashed] (-20,55) -- (-10,70) -- (0,100) -- (10,95) -- (20,80) -- (40,35) -- (60,25) -- (100,15) -- (120,10);
+\end{tikzpicture}
+\end{center}
+\newpage 
+\begin{solution}
+    \begin{enumerate}
+    \item[a)] The average rate of change of \( P \) from 10 ft to 90 ft is calculated as follows:
+    \[
+    \text{Average rate of change} = \frac{P(90) - P(10)}{90 - 10}
+    \]
+ After plugging in the values from the graph, we get:
+    \[
+    \text{Average rate of change} = \frac{80 - 30}{90 - 10} = \frac{50}{80} = 0.625
+    \]
+    So, the average rate of change is \( 0.625 \) approximately.
+
+    
+    \item[b)] The instantaneous rate of change of \( P \) at 50 ft is the derivative of \( P \) at that point:
+    \[
+    P'(50) = \lim_{h \to 0} \frac{P(50+h) - P(50)}{h}
+    \]
+
+\begin{align*}
+P'(50) &= \lim_{h \to 0} \frac{P(50+h) - P(50)}{h} \\
+&= \lim_{h \to 0} \frac{P(50) + P'(50)h - P(50)}{h} \quad \text{(Using the definition of the derivative)} \\
+&= \lim_{h \to 0} \frac{P'(50)h}{h} \quad \text{(Canceling out \(P(50)\))} \\
+&= \lim_{h \to 0} P'(50) \\
+&= P'(50)
+\end{align*}
+Or
+\[
+P'(50) = \frac{d}{dx} P(x) \bigg|_{x=50}
+\]
+
+In simpler terms, we're figuring out how fast the probability changes at 50 ft by looking at the slope of the curve at that point. We do this by drawing a line that just touches the curve at 50 ft and finding its steepness. The result is \( P'(50) \), which tells us the rate of change at that exact spot.
+    
+\end{enumerate}
+
+\begin{align*}
+    \text{\tiny Slope} &= \frac{{\text{\tiny Change in } y}}{{\text{\tiny Change in } x}} \\
+    &= \frac{{-10}}{{20}} \\
+    &= -\frac{1}{2}
+\end{align*}
+
+Using the point-slope form of a line:
+\begin{align*}
+    y - 35 &= -\frac{1}{2}(x - 40) \\
+    y - 35 &= -\frac{1}{2}x + 20 \\
+    y &= -\frac{1}{2}x + 55
+\end{align*}
+
+So, the equation of the tangent line passing through the points \( (40, 35) \) and \( (60, 25) \) is \( y = -\frac{1}{2}x + 55 \).
+
+\end{solution}
+\begin{center}
+\begin{tikzpicture}[scale=0.05]
+    % Draw axes
+    \draw[->] (-25,0) -- (125,0) node[right] {$x$};
+    \draw[->] (0,-10) -- (0,110) node[above] {$P(x)$};
+    
+    % Draw ticks on x-axis
+    \foreach \x in {-20, -10,  10, 20, 40, 60, 80, 100, 120}
+        \draw (\x,2) -- (\x,-2) node[below] {\tiny \x};
+        
+    % Draw ticks on y-axis
+    \foreach \y in {20, 40,50,60,70,80,90,100}
+        \draw (2,\y) -- (-2,\y) node[left] {\tiny \y};
+    
+    % Plot points
+    \foreach \Point in {(-20,55), (-10,70), (0,100), (10,95), (20,80), (40,35), (60,25), (100,15), (120,10)}
+        \node at \Point {\textbullet};
+            \draw[dashed] (-20,55) -- (-10,70) -- (0,100) -- (10,95) -- (20,80) -- (40,35) -- (60,25) -- (100,15) -- (120,10);
+\draw[red] (20,45) -- (100,5) node at (80, 50)[left] {$y = -\frac{1}{2}x + 55$};
+    
+\end{tikzpicture}
+\end{center}
+\end{document}

@@ -1,0 +1,59 @@
+\documentclass[12pt, letterpaper]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{graphicx}
+\usepackage{setspace}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{sectsty}
+\usepackage{tikz}
+\usepackage{xcolor}
+
+% Define custom colors
+\definecolor{antiquefuchsia}{rgb}{0.57, 0.36, 0.51}
+\definecolor{carnationpink}{rgb}{1.0, 0.65, 0.79}
+\definecolor{lavenderpurple}{rgb}{0.59, 0.48, 0.71}
+
+% Load TikZ library for positioning
+\usetikzlibrary{positioning}
+\begin{document}
+\begin{titlepage}
+    \centering
+    \begin{tikzpicture}[overlay, remember picture]
+        % Background gradient
+        \fill[black] (current page.south west) rectangle (current page.north east);
+        \fill[left color=green!80!black, right color=black!40!black] (current page.south west) rectangle (current page.north east);
+        % Title
+        \node[font=\sffamily\bfseries\Huge, text=white] (title) at (current page.center) {Advanced Functions};
+        % Author
+        \node[below=1cm of title, font=\sffamily\LARGE, text=white] {by Kensukeken};
+        % Mathematical symbols and equations
+        \node[below=2cm of title, font=\sffamily\Large, text=white] (equation) {$\frac{\sqrt[n]{a}}{\sqrt[m]{b}}=\frac{\sqrt[nm]{a^m}}{\sqrt[nm]{b^m}}=\sqrt[nm]{\frac{a^m}{b^n}}, b \ne 0$};
+        \node[below=1cm of equation, font=\sffamily\large, text=white] {ISBN: 123-456-790};
+        % Colored rectangle
+        \fill[white] (title.east) ++(2cm,0) rectangle ++(5cm,-7cm);
+    \end{tikzpicture}
+\end{titlepage}
+
+\clearpage % New page
+
+\thispagestyle{empty} % No page number
+
+
+
+\vspace{2cm}
+
+% Title
+\begin{center}
+    \Huge\textbf{Advanced Functions}
+\end{center}
+
+\vspace{2cm}
+
+% Author
+\begin{center}
+    \Large{Kensukeken} \\
+    \large{Date: February 26th, 2024} 
+\end{center}
+
+\end{document}

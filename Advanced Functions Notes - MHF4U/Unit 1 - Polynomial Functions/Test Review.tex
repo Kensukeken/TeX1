@@ -1,0 +1,130 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{amsmath, amssymb}
+\usepackage{xcolor}
+\usepackage{tikz}
+\usepackage{enumitem}
+\usepackage{lipsum}
+\usetikzlibrary{fit}
+\usepackage{hyperref} 
+\usepackage{subfig}
+\usepackage{xcolor}
+\usepackage{colortbl}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.17}
+
+
+% Define colors
+\definecolor{lessoncolor}{RGB}{74, 144, 226}
+\definecolor{examplecolor}{RGB}{92, 184, 92}
+\definecolor{notecolor}{RGB}{255, 179, 102}
+
+% Define a command for colorful sections
+\newcommand{\colorsection}[1]{\section*{\textcolor{lessoncolor}{#1}}}
+
+% Set up TikZ for graphing
+\usetikzlibrary{positioning, arrows.meta, shapes.geometric}
+
+% Document
+\begin{document}
+\section{A polynomial function has the form:}
+\textbf{A polynomial function has the form:}
+\begin{itemize}
+    \item $\{ n \in \mathbb{W}\}$ and the n is the \textcolor{red}{degree} of the function since it is the largest exponent of the variable x.
+    \item $a_n$ is called \textcolor{red}{leading} coefficient
+    \item $a_0$ has no variable attached to it and so is called the constant term.
+\end{itemize}
+\textbf{A polynomial function of degree n will have}
+\begin{itemize}
+    \item the $n^{th}$ finite difference with common values
+    \item a common difference = an!, where $a$ is the leading coefficient and the n is the \textcolor{red}{degree} 
+    \item at \textcolor{red}{n} x-intercepts
+    \item at \textcolor{red}{$n-1$} local extreme points (maximums or minimums)
+\end{itemize}
+\section{Polynomial function of Odd degree}
+
+\begin{itemize}
+    \item the largest exponent on all the variable is an \textcolor{red}{odd} number.
+    \item End Behaviour: what the function looks like as \textcolor{red}{x} goes off to $\pm \infty$
+    \item Will always begin and end in \textcolor{red}{opposite} direction.
+    \item \textbf{If the leading coefficient is positive} - will start at negative infinity (quad 3) and stop at positive infinity (quad 1)(if you look at the "big picture" the overall "slope" of the graph is \textcolor{red}{positive}) as $x \to -\infty, y \to -\infty$ and as $x \to \infty, y \to \infty$
+    \item \textbf{If the leading coefficient is negative}- will start at positive infinity (quad 2) and stop at negative infinity(quad 4) (if you look at the "big picture" the overall "slope" of the graph is \textcolor{red}{negative}) as $x \to -\infty, y \to \infty$ and as $x \to \infty, y \to -\infty$
+    \item A polynomial function of odd degree is said to be an \textcolor{red}{odd} function if all the variables have odd exponents.
+    \item If a polynomial function is odd, it will have a point of symmetry at the origin.
+\end{itemize}
+\section{Polynomial functions of Even Degree}
+\begin{itemize}
+    \item the largest exponent on all the variables is an \textcolor{red}{even} number.
+    \item End Behaviour: what the function looks like as \textcolor{red}{x} goes off to $\pm \infty$
+    \item Will always begin and end in the \textcolor{red}{same} direction.
+    \item \textbf{If the leading coefficient is positive} - will start at positive infinity (quad 2) and stop at positive infinity(quad 1)(if you look at the "big picture" the overall "shape" of the graph opens \textcolor{red}{up}) as $x \to -\infty, y \to \infty$ and as $x \to \infty, y \to \infty$  
+    \item \textbf{If the leading coefficient is negative}- will start at positive infinity (quad 3) and stop at negative infinity (quad 4) (if you look at the "big picture" the overall "slope" of the graph is \textcolor{red}{negative}) as $x \to -\infty, y \to \infty$ and as $x \to \infty, y \to -\infty$
+    \item A polynomial function of even degree is said to be an \textcolor{red}{even} function if ALL the variables have even exponents.
+    \item If a polynomial function is even, it has property that $f(-x)=f(x)$ for all values of x.
+    \item If a polynomial function is even, it will have a line of symmetry in the y-axis. 
+\end{itemize}
+\section{Graphing Polynomial Functions using the X-intercepts}
+\begin{itemize}
+    \item The function must be in \textcolor{red}{factored} form to find the x-intercepts.
+    \item Plot the x-intercepts, and the y-intercept(get h y-intercept by subbing \textcolor{red}{0} in for x)
+    \item Use an \textcolor{red}{interval} test to determine the sign of the polynomial in the intervals divided by the x-intercepts.
+    \item The function $f(x)=(x-3)(x-1)(x+2)^2(x+5)^3$ is of degree 7. It has \textcolor{red}{4} intercepts. The zero from the factor $(x+2)^2$ is repeated and so is said to have \textcolor{red}{order} of 2. The zero from the factor $(x+5)^3$ is repeated and so is said to have order $3$.
+    \item The function will pass through the axis at any zero with an \textcolor{red}{odd} order, and just skim the x-axis for zeros with an \textcolor{red}{even} order.
+    \item For a zero of order 1, the function will pass through the x-axis looking \textcolor{red}{linear}.
+    \item For a zero of order 2 the function will pass through the ax-s looking \textcolor{red}{quadratic}.
+    \item For a zero of order 3 the function will pass through the x-axis looking \textcolor{red}{cubic} $\dots$ and so on $\dots$
+\end{itemize}
+\section{Transformations of Power Functions}
+
+
+$$y=a[k(x-d)]^n+C$$
+\subsection*{Summary of Effects in Polynomial Functions}
+
+\begin{itemize}
+    \item \textbf{Vertical Shift:} Value of $C$ in $f(x) = a[k(x - d)]^n + c$
+    \begin{itemize}
+        \item $C > 0$: Shift $C$ units up
+        \item $C < 0$: Shift $C$ units down
+    \end{itemize}
+    
+    \item \textbf{Horizontal Shift:} Value of $h$ in $f(x) = a[k(x - d)]^n + c$
+    \begin{itemize}
+        \item $d > 0$: Shift $|d|$ units right
+        \item $d < 0$: Shift $|d|$ units left
+    \end{itemize}
+    
+    \item \textbf{Vertical Stretch/Compression and Reflection:} Value of $a$ in $f(x) = a[k(x - d)]^n + c$
+    \begin{itemize}
+        \item $a > 1$ or $a < -1$: Vertical stretch by a factor of $|a|$
+        \item $-1 < a < 1$: Vertical compression by a factor of $|a|$
+        \item $a < 0$: Vertical reflection (reflection in the $x$-axis)
+    \end{itemize}
+    
+    \item \textbf{Horizontal Compression/Stretch and Reflection:} Value of $k$ in $f(x) = a[k(x - d)]^n + c$
+    \begin{itemize}
+        \item $k > 1$ or $k < -1$: Horizontal compression by a factor of $|k|$
+        \item $-1 < k < 1$: Horizontal stretch by a factor of $|k|$
+        \item $k < 0$: Horizontal reflection (reflection in the $y$-axis)
+    \end{itemize}
+\end{itemize}
+
+\textbf{Note:}
+\begin{itemize}
+    \item $C$ and $d$ cause vertical transformations and therefore affect the $y$-coordinates of the function.
+    \item $a$ and $k$ cause horizontal transformations and therefore affect the $x$-coordinates of the function.
+    \item When applying transformations to a parent function, make sure to apply the transformations represented by $C$ and $d$ before the transformations represented by $a$ and $k$.
+    \item We can use the mapping $(x,y) \to \left( \frac{x}{k}+d, ay+c\right)$ to transform every point on the original power function into the new power function
+\end{itemize}
+\section{Average and Instantaneous Rates of Change }
+\begin{itemize}
+    \item The average rate of change of a function is an function is an interval is given by the \textbf{slope} of the \textcolor{red}{secant} line that passes through the interval's end points
+    $$\text{average rate of change}= \frac{\text{change in y}}{\text{change in x}}\left[\frac{\Delta y}{\Delta x}\right]$$
+    \item he smaller the interval the closer the secant line is to being a \textcolor{red}{tangent} line.
+    \item Instantaneous rates of change are given by the slope of the \textcolor{red}{tangent}.
+
+    $$AROC=\frac{f(x_2)-f(x_1)}{x_2 - x_1}$$\\
+    $$(Ex. (5, 7) \implies (5, 001, f(5,001)))$$
+\end{itemize}
+\end{document}

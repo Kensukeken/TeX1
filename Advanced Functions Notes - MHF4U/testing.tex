@@ -1,0 +1,48 @@
+\documentclass{article}
+\usepackage{amsmath}
+\begin{document}
+
+Assume the cosine addition formula has been proven graphically.
+
+\begin{enumerate}
+    \item[a)] Prove the sine addition formula.
+    \begin{solution}
+        \begin{align*}
+            \sin(a) &= \sin(a + b - b) \quad \text{(Rewrite \(\sin(a)\))} \\
+            &= \sin(a + b)\cos(b) - \cos(a + b)\sin(b) \quad \text{(Using the sine subtraction formula)} \\
+            \cos(a + b)\sin(b) &= \sin(a + b)\cos(b) - \sin(a) \quad \text{(Rearrange to isolate \(\cos(a + b)\sin(b)\))} \\
+            &= (\sin(a)\cos(b) + \cos(a)\sin(b))\cos(b) - \sin(a) \quad \text{(Substitute \(\sin(a + b)\) using the sine addition formula)} \\
+            &= \sin(a)\cos^2(b) + \cos(a)\sin(b)\cos(b) - \sin(a) \quad \text{(Distribute \(\cos(b)\))} \\
+            &= \sin(a)(\cos^2(b) - 1) + \cos(a)\sin(b)\cos(b) + \sin(a) \quad \text{(Combine like terms)} \\
+            &= -\sin(a)\sin^2(b) + \cos(a)\sin(b)\cos(b) \quad \text{(Simplify \(\cos^2(b) - 1 = -\sin^2(b)\))} \\
+            \cos(a + b)\sin(b) &= \sin(b)(\cos(a)\cos(b) - \sin(a)\sin(b)) \quad \text{(Factor out \(\sin(b)\))} \\
+            \text{For } \sin(b) &\neq 0, \text{ divide both sides by } \sin(b): \\
+            \cos(a + b) &= \cos(a)\cos(b) - \sin(a)\sin(b) \quad \text{(Divide by \(\sin(b)\))}
+        \end{align*}
+
+        When \(\sin(b) = 0\), it implies that \(b = \pi n\) for \(n \in \mathbb{Z}\). Thus,
+        \begin{align*}
+            \cos(a + \pi n) &= \cos(a) \cos(\pi n) - \sin(a) \sin(\pi n) \\
+            &= \cos(a)(-1)^n - \sin(a) \cdot 0 \\
+            &= (-1)^n \cos(a)
+        \end{align*}
+
+        Therefore, the cosine addition formula \(\cos(a + b) = \cos(a) \cos(b) - \sin(a) \sin(b)\) holds for all values of \(b\).
+
+        By continuity, the sine addition formula also holds:
+        \begin{align*}
+            \sin(a + b) &= \cos(a + b)\sin(b) + \sin(a + b)\cos(b) \\
+            &= (\cos(a)\cos(b) - \sin(a)\sin(b))\sin(b) + (\sin(a)\cos(b) + \cos(a)\sin(b))\cos(b) \\
+            &= \cos(a)\cos(b)\sin(b) - \sin(a)\sin^2(b) + \sin(a)\cos^2(b) + \cos(a)\sin(b)\cos(b) \\
+            &= \sin(a)(\cos^2(b) + \sin^2(b)) + \cos(a)\cos(b)\sin(b) - \sin(a)\sin^2(b) \\
+            &= \sin(a)(1) + \cos(a)\cos(b)\sin(b) - \sin(a)\sin^2(b) \\
+            &= \sin(a) + \cos(a)\cos(b)\sin(b) - \sin(a)\sin^2(b) \\
+            &= \sin(a) + (\cos(a)\cos(b)\sin(b) - \sin(a)\sin^2(b)) \\
+            &= \sin(a + b)\cos(b) + \cos(a + b)\sin(b) \\
+            &= \cos(a)\cos(b)\sin(b) + \sin(a)\cos(b) \\
+            &= \sin(a)\cos(b) + \cos(a)\sin(b)
+        \end{align*}
+    \end{solution}
+\end{enumerate}
+
+\end{document}
